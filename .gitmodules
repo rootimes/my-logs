@@ -1,0 +1,3 @@
+[submodule "themes/hugo-theme-tailwind"]
+	path = themes/hugo-theme-tailwind
+	url = git@github.com:rootimes/hugo-theme-tailwind.git
