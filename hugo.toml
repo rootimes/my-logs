@@ -1,3 +1,38 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "http://localhost"
+title = "Rootimes's"
+author = "rootimes"
+copyright = "rootimes"
+paginate = 10
+languageCode = "en"
+theme = "hugo-theme-tailwind"
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "logo.webp"
+
+  [params.footer]
+    since = 2024
+    poweredby = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
