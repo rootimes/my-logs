@@ -1,4 +1,4 @@
-baseURL = "http://localhost"
+baseURL = "https://rootimes.github.io/my-logs/"
 title = "Rootimes's"
 author = "rootimes"
 copyright = "rootimes"
