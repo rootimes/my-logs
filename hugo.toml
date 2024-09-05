@@ -12,7 +12,7 @@ theme = "hugo-theme-tailwind"
   contentTypeName = "posts"
 
   [params.header]
-    logo = "images/logo.webp"
+    logo = "images/rootimes.png"
 
   [params.footer]
     since = 2024
