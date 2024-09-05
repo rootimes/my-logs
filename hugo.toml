@@ -2,7 +2,7 @@ baseURL = "https://rootimes.github.io/my-logs/"
 title = "Rootimes's"
 author = "rootimes"
 copyright = "rootimes"
-paginate = 10
+pagerSize = 10
 languageCode = "en"
 theme = "hugo-theme-tailwind"
 
@@ -12,11 +12,18 @@ theme = "hugo-theme-tailwind"
   contentTypeName = "posts"
 
   [params.header]
-    logo = "logo.webp"
+    logo = "images/logo.webp"
 
   [params.footer]
     since = 2024
-    poweredby = true
+    poweredby = false
+
+  [params.giscus]
+    repo = "rootimes/my-blog"
+    repoID = "851189860"
+    category = "General"
+    categoryID = "DIC_kwDOMrwgZM4CiJxa"
+    inputPosition = "bottom"
 
 [menu]
 
