@@ -1,0 +1,45 @@
+baseURL = "http://localhost:1313"
+title = "Rootimes's Code ICU"
+author = "rootimes"
+copyright = "rootimes"
+pagerSize = 10
+languageCode = "en"
+theme = "hugo-theme-tailwind"
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "images/rootimes.webp"
+
+  [params.footer]
+    since = 2024
+    poweredby = false
+
+  [params.giscus]
+    repo = "rootimes/my-blog"
+    repoID = "851189860"
+    category = "General"
+    categoryID = "DIC_kwDOMrwgZM4CiJxa"
+    inputPosition = "bottom"
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
