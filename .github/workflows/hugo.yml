@@ -27,6 +27,7 @@ defaults:
 
 jobs:
   build:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.133.1
@@ -63,6 +64,7 @@ jobs:
           path: ./public
 
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
