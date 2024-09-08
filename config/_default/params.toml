@@ -1,0 +1,27 @@
+keywords = "rootimes's code blog"
+subtitle = "rootimes's code icu"
+
+[author]
+  name = "rootimes"
+  email = "leo32095@gmail.com"
+
+[header]
+  logo = "images/rootimes.webp"
+
+[footer]
+  since = 2024
+  poweredby = false
+
+[giscus]
+    repo = "rootimes/my-blog"
+    repoID = "851189860"
+    category = "General"
+    categoryID = "DIC_kwDOMrwgZM4CiJxa"
+    inputPosition = "bottom"
+
+[social_media]
+    [[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/rootimes'
