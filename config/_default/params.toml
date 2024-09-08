@@ -1,9 +1,7 @@
 keywords = "rootimes's code blog"
 subtitle = "rootimes's code icu"
 
-[author]
-  name = "rootimes"
-  email = "leo32095@gmail.com"
+contentTypeName = "post"
 
 [header]
   logo = "images/rootimes.webp"
@@ -13,11 +11,13 @@ subtitle = "rootimes's code icu"
   poweredby = false
 
 [giscus]
-    repo = "rootimes/my-blog"
+    enabled = true
+    repo = "rootimes/my-logs"
     repoID = "851189860"
     category = "General"
     categoryID = "DIC_kwDOMrwgZM4CiJxa"
     inputPosition = "bottom"
+    reactionsEnabled = "1"
 
 [social_media]
     [[social_media.items]]
