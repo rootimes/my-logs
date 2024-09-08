@@ -3,8 +3,12 @@ title = "Rootimes's Code ICU"
 author = "rootimes"
 copyright = "rootimes"
 pagerSize = 10
-languageCode = "en"
+languageCode = "zh-TW"
+defaultContentLanguage = "zh-TW"
 theme = "hugo-theme-tailwind"
+
+[markup]
+  _merge = "deep"
 
 [params]
   # dir name of your blog content (default is `content/posts`).
