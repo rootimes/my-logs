@@ -1,6 +1,9 @@
+# SEO keywords and description for your site.
 keywords = "rootimes's code blog"
 subtitle = "rootimes's code icu"
 
+# dir name of your blog content (default is `content/posts`).
+# the list of set content will show up on your index page (baseurl).
 contentTypeName = "post"
 
 [header]

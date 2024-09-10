@@ -2,34 +2,35 @@
   languageCode = 'en-US'
   languageDirection = 'ltr'
   languageName = 'English'
-  weight = 1
+  weight = 2
   [en.menu]
-  [[en.menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "post"
-    weight = 10
-
   [[en.menu.main]]
     identifier = "about"
     name = "About"
     pageRef = "about"
-    weight = 20
+    weight = 1
+
+  [[en.menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "posts"
+    weight = 2
+
 
 [zh-tw]
   languageCode = 'zh-TW'
   languageDirection = 'ltr'
-  languageName = '中文'
-  weight = 2
+  languageName = '繁體中文'
+  weight = 1
   [zh-tw.menu]
-  [[zh-tw.menu.main]]
-    identifier = "post"
-    name = "文章"
-    pageRef = "post"
-    weight = 10
-
   [[zh-tw.menu.main]]
     identifier = "about"
     name = "關於"
     pageRef = "about"
-    weight = 20
+    weight = 1
+
+  [[zh-tw.menu.main]]
+    identifier = "post"
+    name = "文章"
+    pageRef = "posts"
+    weight = 2
