@@ -1,4 +1,4 @@
 ---
-title: A Category with Slug
+title: TEST
 slug: with-slug
 ---
