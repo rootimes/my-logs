@@ -1,28 +1,14 @@
 baseURL = "https://rootimes.github.io/my-logs/"
 title = "Rootimes's Code ICU"
-author = "rootimes"
-copyright = "rootimes"
-pagerSize = 10
+author = "Rootimes"
+copyright = "Rootimes"
+pagerSize = 5
 languageCode = "zh-TW"
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-TW"
 theme = "hugo-theme-tailwind"
 
 [markup]
   _merge = "deep"
-
-[menu]
-
-  [[menu.main]]
-    identifier = "post"
-    name = "Post"
-    pageRef = "/posts"
-    weight = 0
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    pageRef = "/about"
-    weight = 10
 
 [taxonomies]
 category = "categories"

@@ -1,16 +1,2 @@
 baseURL = "http://localhost:1313"
 title = "Code ICU development"
-author = "rootimes"
-copyright = "rootimes"
-pagerSize = 10
-languageCode = "zh-TW"
-defaultContentLanguage = "zh-TW"
-theme = "hugo-theme-tailwind"
-
-[markup]
-  _merge = "deep"
-
-[taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
