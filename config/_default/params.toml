@@ -4,7 +4,16 @@ subtitle = "rootimes's code icu"
 
 # dir name of your blog content (default is `content/posts`).
 # the list of set content will show up on your index page (baseurl).
-contentTypeName = "post"
+contentTypeName = "posts"
+
+[author]
+  name = "Rootimes"
+  email = "leo32095@gmail.com"
+
+[search]
+  summaryInclude = 180 # show only part of content in search result.
+  minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
+  threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
 
 [header]
   logo = "images/rootimes.webp"
