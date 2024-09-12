@@ -31,11 +31,15 @@ showAuthor = true
 [giscus]
     enabled = true
     repo = "rootimes/my-logs"
-    repoID = "851189860"
+    repoID = "R_kgDOMrwgZA"
     category = "General"
     categoryID = "DIC_kwDOMrwgZM4CiJxa"
-    inputPosition = "bottom"
+    mapping = "pathname"
+    strict = "0"
     reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    
 
 [social_media]
     [[social_media.items]]
