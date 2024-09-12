@@ -1,6 +1,5 @@
 baseURL = "https://rootimes.github.io/my-logs/"
 title = "Rootimes's Code ICU"
-author = "Rootimes"
 copyright = "Rootimes"
 pagerSize = 5
 languageCode = "zh-TW"

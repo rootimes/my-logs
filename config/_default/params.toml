@@ -6,6 +6,10 @@ subtitle = "rootimes's code icu"
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "posts"
 
+toc = false
+
+showAuthor = true
+
 [author]
   name = "Rootimes"
   email = "leo32095@gmail.com"
