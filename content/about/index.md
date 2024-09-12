@@ -1,25 +1,29 @@
 +++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+title = "關於這裡"
+description = "這裡是 Rootimes 的筆記站，來源多是蒐集與經驗所得"
+date = "2024-09-12"
+aliases = ["about-rootimes", "contact"]
+author = "Rootimes"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+## 建站原因
 
-Hugo makes use of a variety of open source projects including:
+建立此站，評估很多時間
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+面對程式領域，有如一葉小舟飄盪在汪洋大海
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+許多的知識與工具，過眼雲煙
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+不僅如此，隨著時間的進展，技術的進步速度，真的讓人一日三秋，一不留神，恍如隔世
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+憑著自己對著程式的熱情，也為了能夠與他人分享，能夠多交流
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+最終決定利用 Blog 來收納自己的學習
+
+內容大多是蒐集而來，會盡量附上參考，也會增加一些自己的看法
+
+本就拋磚引玉，歡迎大家利用底下的評論，有想法就一起討論
+
+最後，各位看官與大佬們，多多指教
+
+願在程式的世界中，你我一同努力

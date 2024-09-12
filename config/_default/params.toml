@@ -8,6 +8,8 @@ contentTypeName = "posts"
 
 toc = false
 
+jsonLD = true
+
 showAuthor = true
 
 [author]
