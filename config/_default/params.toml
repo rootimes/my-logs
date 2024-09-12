@@ -1,0 +1,45 @@
+# SEO keywords and description for your site.
+keywords = "rootimes's code blog"
+subtitle = "rootimes's code icu"
+
+# dir name of your blog content (default is `content/posts`).
+# the list of set content will show up on your index page (baseurl).
+contentTypeName = "posts"
+
+toc = false
+
+jsonLD = true
+
+showAuthor = true
+
+[author]
+  name = "Rootimes"
+  email = "leo32095@gmail.com"
+
+[search]
+  summaryInclude = 180 # show only part of content in search result.
+  minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
+  threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
+
+[header]
+  logo = "images/rootimes.webp"
+
+[footer]
+  since = 2024
+  poweredby = false
+
+[giscus]
+    enabled = true
+    repo = "rootimes/my-logs"
+    repoID = "851189860"
+    category = "General"
+    categoryID = "DIC_kwDOMrwgZM4CiJxa"
+    inputPosition = "bottom"
+    reactionsEnabled = "1"
+
+[social_media]
+    [[social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/rootimes'
