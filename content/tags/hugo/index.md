@@ -1,4 +1,4 @@
----
-title: hugo
-slug: hugo
----
++++
+title = "hugo"
+slug = "hugo"
++++

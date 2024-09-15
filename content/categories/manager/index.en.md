@@ -1,0 +1,4 @@
++++
+title = "manager"
+slug = "manager"
++++
