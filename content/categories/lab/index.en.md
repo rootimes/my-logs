@@ -1,0 +1,4 @@
+---
+title: lab
+slug: lab
+---
