@@ -1,4 +1,4 @@
----
-title: 工具
-slug: tool
----
++++
+title = "工具"
+slug = "tool"
++++

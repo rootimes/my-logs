@@ -1,4 +1,4 @@
----
-title: manager-tool
-slug: manager
----
++++
+title = "manager"
+slug = "manager"
++++

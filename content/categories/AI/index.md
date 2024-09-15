@@ -1,4 +1,4 @@
----
-title: AI
-slug: AI
----
++++
+title = "AI"
+slug = "AI"
++++

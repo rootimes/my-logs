@@ -1,4 +1,4 @@
----
-title: magic
-slug: magic
----
++++
+title = "magic"
+slug = "magic"
++++

@@ -1,4 +1,4 @@
----
-title: basic
-slug: basic
----
++++
+title = "basic"
+slug = "basic"
++++

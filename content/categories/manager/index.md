@@ -1,4 +1,4 @@
----
-title: 管理工具
-slug: manager
----
++++
+title = "管理"
+slug = "manager"
++++

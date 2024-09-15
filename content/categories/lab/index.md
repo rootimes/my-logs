@@ -1,4 +1,4 @@
----
-title: 實驗室
-slug: lab
----
++++
+title = "實驗室"
+slug = "lab"
++++

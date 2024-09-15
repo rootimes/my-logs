@@ -1,4 +1,4 @@
----
-title: 其他
-slug: other
----
++++
+title = "其他"
+slug = "other"
++++

@@ -1,4 +1,4 @@
----
-title: lab
-slug: lab
----
++++
+title = "lab"
+slug = "lab"
++++

@@ -1,4 +1,4 @@
----
-title: 入門
-slug: basic
----
++++
+title = "入門"
+slug = "basic"
++++

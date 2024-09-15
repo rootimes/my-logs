@@ -1,4 +1,4 @@
----
-title: coding-style
-slug: coding-style
----
++++
+title = "coding-style"
+slug = "coding-style"
++++

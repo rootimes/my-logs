@@ -1,4 +1,4 @@
 +++
-title = "關於"
+title = "about"
 slug =  "about"
 +++
