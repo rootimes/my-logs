@@ -4,6 +4,7 @@ description = "這裡是 Rootimes 的筆記站，來源多是蒐集與經驗所�
 date = "2024-09-12"
 aliases = ["about-rootimes", "contact"]
 author = "Rootimes"
+weight = 1
 +++
 
 ## 建站原因

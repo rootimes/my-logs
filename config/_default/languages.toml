@@ -16,7 +16,6 @@
     pageRef = "posts"
     weight = 2
 
-
 [zh-tw]
   languageCode = 'zh-TW'
   languageDirection = 'ltr'
