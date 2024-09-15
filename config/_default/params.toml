@@ -6,8 +6,13 @@ subtitle = "rootimes's code icu"
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "posts"
 
+# Show table of contents at the top of your posts (defaults to false)
+# Alternatively, add this param to post front matter for specific posts
 toc = false
 
+showReadingTime = true
+
+# use structure json-ld for articles
 jsonLD = true
 
 showAuthor = true
