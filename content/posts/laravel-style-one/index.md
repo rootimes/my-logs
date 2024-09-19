@@ -2,6 +2,7 @@
 title = 'Laravel Style'
 date = 2024-09-19T23:04:43+08:00
 draft = true
+description = "Laravel 的 coding style 整理"
 +++
 
 ## Laravel coding style 的一些實踐
