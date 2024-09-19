@@ -1,7 +1,13 @@
 +++
 title = 'Laravel Style'
 date = 2024-09-19T23:04:43+08:00
-draft = true
+draft = false
+tags = [
+    "laravel",
+]
+categories = [
+    "coding-style",
+]
 description = "Laravel 的 coding style 整理"
 +++
 
