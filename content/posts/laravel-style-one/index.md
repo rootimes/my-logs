@@ -16,9 +16,11 @@ description = "Laravel 的 coding style 整理"
 這篇主要整理各種在 Laravel 框架上的良好風格實踐
 
 ### 單一職責原則
+
 一個類別與方法應只有一個職責
 
 #### 舉例
+
 ```php
 public function getFullNameAttribute(): string
 {
@@ -31,6 +33,7 @@ public function getFullNameAttribute(): string
 ```
 
 #### 調整
+
 1. 使用語意化命名 function 使程式目的更清晰
 2. 縮減每一個 function 的用途，簡化職責
 
@@ -56,6 +59,45 @@ public function getFullNameShort(): string
 }
 ```
 
+### 降低 Controller 複雜度
+
+使用 Query Builder 或是 Raw SQL 時，將這部分程式，放置在 Model 當中，也可自訂一個 Repository 層
+
+#### 舉例
+
+```php
+public function index()
+{
+    $clients = Client::verified()
+        ->with(['orders' => function ($q) {
+            $q->where('created_at', '>', Carbon::today()->subWeek());
+        }])
+        ->get();
+
+    return view('index', ['clients' => $clients]);
+}
+```
+
+#### 調整
+
+```php
+public function index()
+{
+    return view('index', ['clients' => $this->client->getWithNewOrders()]);
+}
+
+class Client extends Model
+{
+    public function getWithNewOrders()
+    {
+        return $this->verified()
+            ->with(['orders' => function ($q) {
+                $q->where('created_at', '>', Carbon::today()->subWeek());
+            }])
+            ->get();
+    }
+}
+```
 ## 參考資料
 [laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
