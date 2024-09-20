@@ -19,7 +19,7 @@ description = "Laravel 的 coding style 整理"
 
 一個類別與方法應只有一個職責
 
-#### 舉例
+#### 舉例 : 拆分複雜判斷
 
 ```php
 public function getFullNameAttribute(): string
@@ -57,6 +57,17 @@ public function getFullNameShort(): string
 {
     return $this->first_name[0] . '. ' . $this->last_name;
 }
+```
+
+#### 舉例 : 程式碼中註釋
+```php
+// 確定是否有任何 Join
+if (count((array) $builder->getQuery()->joins) > 0)
+```
+
+#### 調整
+```php
+if ($this->hasJoins())
 ```
 
 ### 降低 Controller 複雜度
