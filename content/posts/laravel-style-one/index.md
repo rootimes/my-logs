@@ -213,8 +213,57 @@ public function show(Request $request)
 }
 ```
 
+### DRY 原則 - 不要重覆自己
+
+通過 SRP (單一職責原則)，先行簡化程式碼，再將部分封裝
+
+重複使用程式碼，這並不是目的，它是一個整理結果
+
+筆者自己認為，隨著 AI 發展
+
+重複使用程式碼的部分可以在特定的類別或是命名空間內即可
+
+未必要追求大規模的重用，高度的重用程式碼
+
+有時帶來很高的耦合性，在開發上反而更加困難
+
+#### 舉例 : Eloquent Scope
+```php
+public function getActive()
+{
+    return $this->where('verified', 1)->whereNotNull('deleted_at')->get();
+}
+
+public function getArticles()
+{
+    return $this->whereHas('user', function ($q) {
+            $q->where('verified', 1)->whereNotNull('deleted_at');
+        })->get();
+}
+```
+
+#### 調整
+```php
+public function scopeActive($q)
+{
+    return $q->where('verified', 1)->whereNotNull('deleted_at');
+}
+
+public function getActive()
+{
+    return $this->active()->get();
+}
+
+public function getArticles()
+{
+    return $this->whereHas('user', function ($q) {
+            $q->active();
+        })->get();
+}
+```
+
 ## 參考資料
-[laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
+[Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
 ## 免責聲明
 
