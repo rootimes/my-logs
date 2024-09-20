@@ -325,6 +325,30 @@ $users = User::with('profile')->get();
 @endforeach
 ```
 
+### 使用 config 和 enum 代替重複性文字
+
+#### 舉例
+```php
+public function isNormal()
+{
+    return $article->type === 'normal';
+}
+
+return back()->with('message', 'Your article has been added!');
+```
+
+#### 調整
+```php
+public function isNormal()
+{
+    return $article->type === Article::TYPE_NORMAL;
+}
+
+return back()->with('message', __('app.article_added'));
+```
+
+```
+
 ## 參考資料
 [Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
