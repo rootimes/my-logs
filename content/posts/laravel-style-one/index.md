@@ -368,6 +368,66 @@ return back()->with('message', __('app.article_added'));
 `->select('id', 'name')->get()` | `->get(['id', 'name'])`
 `->first()->name` | `->value('name')`
 
+### 使用 IoC Container 或 Facade 而不是直接 new Class
+
+#### 舉例
+```php
+$user = new User;
+$user->create($request->validated());
+```
+
+#### 調整
+```php
+public function __construct(User $user)
+{
+    $this->user = $user;
+}
+
+...
+
+$this->user->create($request->validated());
+```
+
+### 使用 config 統一取得 .env 參數
+
+#### 舉例
+```php
+$apiUrl = env('API_URL');
+```
+
+#### 調整
+```php
+// config/api.php
+'url' => env('API_URL'),
+
+// Use the config
+$apiUrl = config('api.url');
+```
+
+### 用 Carbon 操作日期時間，model 可用 casts 做轉換
+
+#### 舉例
+```php
+{{ Carbon::createFromFormat('Y-d-m H-i', $object->ordered_at)->toDateString() }}
+{{ Carbon::createFromFormat('Y-d-m H-i', $object->ordered_at)->format('m-d') }}
+```
+
+#### 調整
+```php
+// Model
+protected $casts = [
+    'ordered_at' => 'datetime', // 自動將 'ordered_at' 轉換為 Carbon 實例
+];
+
+// 使用 carbon 方法操作時間
+public function getSomeDateAttribute($date)
+{
+    return $date->format('m-d');
+}
+
+// View Blade
+{{ $object->ordered_at->toDateString() }}
+{{ $object->ordered_at->some_date }}
 ```
 
 ## 參考資料
