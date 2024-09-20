@@ -61,9 +61,9 @@ public function getFullNameShort(): string
 
 ### 降低 Controller 複雜度
 
-使用 Query Builder 或是 Raw SQL 時，將這部分程式，放置在 Model 當中，也可自訂一個 Repository 層
+使用 Query Builder 或是 Raw SQL 時，將這部分程式放置在 Model 當中，也可自訂一個 Repository 層
 
-#### 舉例
+#### 舉例 : Query
 
 ```php
 public function index()
@@ -98,6 +98,44 @@ class Client extends Model
     }
 }
 ```
+
+#### 舉例 : validate
+
+需要驗證的資料，驗證方法可以移到 RequestForm 類別內
+
+```php
+public function store(Request $request)
+{
+    $request->validate([
+        'title' => 'required|unique:posts|max:255',
+        'body' => 'required',
+        'publish_at' => 'nullable|date',
+    ]);
+
+    ...
+}
+```
+
+#### 調整
+```php
+public function store(PostRequest $request)
+{
+    ...
+}
+
+class PostRequest extends Request
+{
+    public function rules()
+    {
+        return [
+            'title' => 'required|unique:posts|max:255',
+            'body' => 'required',
+            'publish_at' => 'nullable|date',
+        ];
+    }
+}
+```
+
 ## 參考資料
 [laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
