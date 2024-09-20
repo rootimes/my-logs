@@ -285,6 +285,33 @@ $article->save();
 $category->article()->create($request->validated());
 ```
 
+### 使用 Eager Loading 避免 N+1 問題
+
+使用 with() 同時取得關聯模型
+
+#### 舉例
+
+假設 User 有 100，則會執行 101 次 DB 查詢
+
+每個次取得 profile 都會執行一次
+
+```php
+$users = User::all();
+
+@foreach ($users as $user)
+    {{ $user->profile->name }}
+@endforeach
+```
+
+#### 調整
+
+僅執行 2 次查詢
+```php
+$users = User::with('profile')->get();
+
+@foreach ($users as $user)
+    {{ $user->profile->name }}
+@endforeach
 ```
 
 ## 參考資料
