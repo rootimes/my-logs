@@ -262,6 +262,31 @@ public function getArticles()
 }
 ```
 
+### 大量賦值，使用 ORM 方法
+
+Laravel 為避免批量賦值導致非預期變更，提供了 $fillable 和 $guarded 的限制
+
+如果使用手動賦值，不受此限
+
+#### 舉例
+```php
+$article = new Article;
+$article->title = $request->title;
+$article->content = $request->content;
+$article->verified = $request->verified;
+
+// Add category to article
+$article->category_id = $category->id;
+$article->save();
+```
+
+#### 調整
+```php
+$category->article()->create($request->validated());
+```
+
+```
+
 ## 參考資料
 [Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
