@@ -61,9 +61,53 @@ public function getFullNameShort(): string
 
 ### 降低 Controller 複雜度
 
-使用 Query Builder 或是 Raw SQL 時，將這部分程式放置在 Model 當中，也可自訂一個 Repository 層
+筆者認為這些技巧可以按情形調整，避免過度設計問題
+
+一些本身很簡單的的功能(行數本身少)，仍然僵硬的套用這些原則
+
+最終反而維護困難(程式碼散落在專案各處)
+
+以下拆分目的主要是示範
+
+#### 舉例 : Service
+
+將商業邏輯移到 Service 層當中，Controller 只保留選擇使用 Service 和取得參數方法
+
+```php
+public function store(Request $request)
+{
+    if ($request->hasFile('image')) {
+        $request->file('image')->move(public_path('images') . 'temp');
+    }
+
+    ...
+}
+```
+
+#### 調整
+
+```php
+public function store(Request $request)
+{
+    $this->articleService->handleUploadedImage($request->file('image'));
+
+    ...
+}
+
+class ArticleService
+{
+    public function handleUploadedImage($image)
+    {
+        if (!is_null($image)) {
+            $image->move(public_path('images') . 'temp');
+        }
+    }
+}
+```
 
 #### 舉例 : Query
+
+使用 Query Builder 或是 Raw SQL 時，將這部分程式放置在 Model 當中，也可自訂一個 Repository 層
 
 ```php
 public function index()
@@ -99,7 +143,7 @@ class Client extends Model
 }
 ```
 
-#### 舉例 : validate
+#### 舉例 : Validate
 
 需要驗證的資料，驗證方法可以移到 RequestForm 類別內
 
@@ -133,6 +177,39 @@ class PostRequest extends Request
             'publish_at' => 'nullable|date',
         ];
     }
+}
+```
+
+#### 舉例 : Resource
+```php
+public function index(Request $request)
+{
+    ...
+
+    $message = $this->postService->getPosts();
+
+    return response()->json($message, 200);
+}
+```
+
+#### 調整 
+```php
+public function index(Request $request)
+{
+    ...
+
+    $message = $this->postService->getPosts(); # model collection
+
+    return new PostResource::collection($message);
+}
+
+public function show(Request $request)
+{
+    ...
+
+    $message = $this->postService->getPosts(); # model instances
+
+    return new PostResource($message);
 }
 ```
 
