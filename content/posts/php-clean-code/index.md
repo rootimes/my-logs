@@ -286,6 +286,63 @@ for ($i = 0; $i < count($locations); $i++) {
 }
 ```
 
+### Comparison
+
+型別轉換會導致比較失敗，字串會轉為整數，字串不是數字
+
+#### 舉例 (一)
+
+```php
+$x = '0';
+$y = 0;
+
+if ($x != $y) {
+    // 不會執行
+    // The expression will always pass
+}
+```
+
+#### 調整
+
+強制比較型別和值
+
+```php
+$x = '0';
+$y = 0;
+
+if ($x !== $y) {
+    // 會執行
+    // This ensures the comparison is accurate by type and value
+}
+
+```
+
+#### 舉例 (二)
+
+```php
+$arr = null;
+$str = '';
+
+if ($arr != $str) {
+    // 不會執行
+    // The expression will always pass
+}
+```
+
+#### 調整
+
+強制比較型別和值
+
+```php
+$arr = null;
+$str = '';
+
+if ($arr !== $str) {
+    // 會執行
+    // This ensures the comparison is accurate by type and value
+}
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
