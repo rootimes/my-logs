@@ -343,6 +343,24 @@ if ($arr !== $str) {
 }
 ```
 
+### 使用判斷語法糖來簡化語法
+
+#### 舉例
+
+```php
+if (isset($_GET['name'])) {
+    $name = $_GET['name'];
+} else {
+    $name = 'nobody';
+}
+```
+
+#### 調整
+
+```php
+$name = $_GET['name'] ?? 'nobody';
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
