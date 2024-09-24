@@ -363,7 +363,9 @@ $name = $_GET['name'] ?? 'nobody';
 
 ### 函式用法
 
-需使用 type hinting 避免內部還需要判斷
+需使用 type hinting 限定參數值，避免內部還需要判斷
+
+#### 舉例
 
 ```php
 function createMicrobrewery($breweryName = 'Hipster Brew Co.'): void
@@ -372,10 +374,97 @@ function createMicrobrewery($breweryName = 'Hipster Brew Co.'): void
 }
 ```
 
+#### 調整
+
 ```php
 function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
 {
     // ...
+}
+```
+
+減少函式參數，最好少於 2 個
+
+#### 舉例
+
+```php
+class Questionnaire
+{
+    public function __construct(
+        string $firstname,
+        string $lastname,
+        string $patronymic,
+        string $region,
+        string $district,
+        string $city,
+        string $phone,
+        string $email
+    ) {
+        // ...
+    }
+}
+```
+
+#### 調整
+
+```php
+class Name
+{
+    private $firstname;
+
+    private $lastname;
+
+    private $patronymic;
+
+    public function __construct(string $firstname, string $lastname, string $patronymic)
+    {
+        $this->firstname = $firstname;
+        $this->lastname = $lastname;
+        $this->patronymic = $patronymic;
+    }
+
+    // getters ...
+}
+
+class City
+{
+    private $region;
+
+    private $district;
+
+    private $city;
+
+    public function __construct(string $region, string $district, string $city)
+    {
+        $this->region = $region;
+        $this->district = $district;
+        $this->city = $city;
+    }
+
+    // getters ...
+}
+
+class Contact
+{
+    private $phone;
+
+    private $email;
+
+    public function __construct(string $phone, string $email)
+    {
+        $this->phone = $phone;
+        $this->email = $email;
+    }
+
+    // getters ...
+}
+
+class Questionnaire
+{
+    public function __construct(Name $name, City $city, Contact $contact)
+    {
+        // ...
+    }
 }
 ```
 
