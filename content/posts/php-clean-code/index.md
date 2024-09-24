@@ -361,6 +361,24 @@ if (isset($_GET['name'])) {
 $name = $_GET['name'] ?? 'nobody';
 ```
 
+### 函式用法
+
+需使用 type hinting 避免內部還需要判斷
+
+```php
+function createMicrobrewery($breweryName = 'Hipster Brew Co.'): void
+{
+    // ...
+}
+```
+
+```php
+function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
+{
+    // ...
+}
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
