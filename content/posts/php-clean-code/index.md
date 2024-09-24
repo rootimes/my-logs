@@ -468,6 +468,44 @@ class Questionnaire
 }
 ```
 
+function 名稱要表達目的性
+
+#### 舉例
+
+```php
+class Email
+{
+    //...
+
+    public function handle(): void
+    {
+        mail($this->to, $this->subject, $this->body);
+    }
+}
+
+$message = new Email(...);
+// What is this? A handle for the message? Are we writing to a file now?
+$message->handle();
+```
+
+#### 調整
+
+```php
+class Email
+{
+    //...
+
+    public function send(): void
+    {
+        mail($this->to, $this->subject, $this->body);
+    }
+}
+
+$message = new Email(...);
+// Clear and obvious
+$message->send();
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
