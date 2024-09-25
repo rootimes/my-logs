@@ -422,8 +422,6 @@ class Name
         $this->lastname = $lastname;
         $this->patronymic = $patronymic;
     }
-
-    // getters ...
 }
 
 class City
@@ -440,8 +438,6 @@ class City
         $this->district = $district;
         $this->city = $city;
     }
-
-    // getters ...
 }
 
 class Contact
@@ -455,8 +451,6 @@ class Contact
         $this->phone = $phone;
         $this->email = $email;
     }
-
-    // getters ...
 }
 
 class Questionnaire
