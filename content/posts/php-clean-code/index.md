@@ -500,6 +500,104 @@ $message = new Email(...);
 $message->send();
 ```
 
+function 內部盡量減少抽象層(abstraction)
+
+#### 舉例
+
+```php
+function tokenize(string $code): array
+{
+    $regexes = [
+        // ...
+    ];
+
+    $statements = explode(' ', $code);
+    $tokens = [];
+    foreach ($regexes as $regex) {
+        foreach ($statements as $statement) {
+            $tokens[] = /* ... */;
+        }
+    }
+
+    return $tokens;
+}
+
+function lexer(array $tokens): array
+{
+    $ast = [];
+    foreach ($tokens as $token) {
+        $ast[] = /* ... */;
+    }
+
+    return $ast;
+}
+
+function parseBetterPHPAlternative(string $code): void
+{
+    $tokens = tokenize($code);
+    $ast = lexer($tokens);
+    foreach ($ast as $node) {
+    }
+}
+```
+
+#### 調整
+
+```php
+class Tokenizer
+{
+    public function tokenize(string $code): array
+    {
+        $regexes = [
+            // ...
+        ];
+
+        $statements = explode(' ', $code);
+        $tokens = [];
+        foreach ($regexes as $regex) {
+            foreach ($statements as $statement) {
+                $tokens[] = /* ... */;
+            }
+        }
+
+        return $tokens;
+    }
+}
+
+class Lexer
+{
+    public function lexify(array $tokens): array
+    {
+        $ast = [];
+        foreach ($tokens as $token) {
+            $ast[] = /* ... */;
+        }
+
+        return $ast;
+    }
+}
+
+class BetterPHPAlternative
+{
+    private $tokenizer;
+    private $lexer;
+
+    public function __construct(Tokenizer $tokenizer, Lexer $lexer)
+    {
+        $this->tokenizer = $tokenizer;
+        $this->lexer = $lexer;
+    }
+
+    public function parse(string $code): void
+    {
+        $tokens = $this->tokenizer->tokenize($code);
+        $ast = $this->lexer->lexify($tokens);
+        foreach ($ast as $node) {
+        }
+    }
+}
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
