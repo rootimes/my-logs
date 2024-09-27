@@ -496,7 +496,7 @@ class Email
 }
 
 $message = new Email(...);
-// Clear and obvious
+
 $message->send();
 ```
 
