@@ -502,9 +502,13 @@ $message->send();
 
 function 內部盡量減少抽象層(abstraction)
 
+程式碼的問題在於抽象層次混亂和函式責任不明確
+
 #### 舉例
 
 ```php
+
+tokenize 的細節過多
 function tokenize(string $code): array
 {
     $regexes = [
@@ -522,6 +526,7 @@ function tokenize(string $code): array
     return $tokens;
 }
 
+似乎是為了進行 lexical analysis，但其實它在做的是把 token 轉換為 AST 節點
 function lexer(array $tokens): array
 {
     $ast = [];
@@ -595,6 +600,35 @@ class BetterPHPAlternative
         foreach ($ast as $node) {
         }
     }
+}
+```
+
+不要用 flag 作为函数的参数
+
+#### 舉例
+
+```php
+function createFile(string $name, bool $temp = false): void
+{
+    if ($temp) {
+        touch('./temp/' . $name);
+    } else {
+        touch($name);
+    }
+}
+```
+
+#### 調整
+
+```php
+function createFile(string $name): void
+{
+    touch($name);
+}
+
+function createTempFile(string $name): void
+{
+    touch('./temp/' . $name);
 }
 ```
 
