@@ -603,8 +603,7 @@ class BetterPHPAlternative
 }
 ```
 
-不要用 flag 作为函数的参数
-
+函式內不要使用 boolean 作為區分，函式功能違反單一職責原則
 #### 舉例
 
 ```php
