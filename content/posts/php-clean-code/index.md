@@ -631,6 +631,44 @@ function createTempFile(string $name): void
 }
 ```
 
+函式內不僅僅有回傳，還有改變外部的值，這將更難維護
+#### 舉例
+
+```php
+// Global variable referenced by following function.
+// If we had another function that used this name, now it'd be an array and it could break it.
+$name = 'Rootimes\' blog';
+
+function splitIntoFirstAndLastName(): void
+{
+    global $name;
+
+    $name = explode(' ', $name);
+}
+splitIntoFirstAndLastName();
+
+var_dump($name);
+// ['Rootimes', 'blog'];
+```
+
+#### 調整
+
+```php
+function splitIntoFirstAndLastName(string $name): array
+{
+    return explode(' ', $name);
+}
+
+$name = 'Rootimes blog';
+$newName = splitIntoFirstAndLastName($name);
+
+var_dump($name);
+// 'Rootimes blog';
+
+var_dump($newName);
+// ['Rootimes', 'blog'];
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
