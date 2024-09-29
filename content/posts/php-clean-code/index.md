@@ -508,8 +508,8 @@ function 內部盡量減少抽象層(abstraction)
 
 ```php
 
-tokenize 的細節過多
-function tokenize(string $code): array
+tokenize 的細節過多，目的不夠明確
+function tokenize(string $code): ~~array~~
 {
     $regexes = [
         // ...
