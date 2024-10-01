@@ -708,6 +708,56 @@ $configuration = new Configuration([
 ]);
 ```
 
+避免使用 singleton pattern
+
+1. 隱藏了應用的依賴關係
+2. 不僅負責自身的邏輯，還負責自己的創建和生命週期管理
+#### 舉例
+
+```php
+class DBConnection
+{
+    private static $instance;
+
+    private function __construct(string $dsn)
+    {
+        // ...
+    }
+
+    public static function getInstance(): self
+    {
+        if (self::$instance === null) {
+            self::$instance = new self();
+        }
+
+        return self::$instance;
+    }
+
+    // ...
+}
+
+$singleton = DBConnection::getInstance();
+```
+
+#### 調整
+
+明確創建 DBConnection 的實例
+
+```php
+class DBConnection
+{
+    public function __construct(string $dsn)
+    {
+        // ...
+    }
+
+    // ...
+}
+```
+```php
+$connection = new DBConnection($dsn);
+```
+
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
