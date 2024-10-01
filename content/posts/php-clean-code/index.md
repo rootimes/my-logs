@@ -288,7 +288,7 @@ for ($i = 0; $i < count($locations); $i++) {
 
 ### Comparison
 
-型別轉換會導致比較失敗，字串會轉為整數，字串不是數字
+型別轉換會導致比較失敗，字串會轉為整數，但事實字串不是數字
 
 #### 舉例 (一)
 
@@ -667,6 +667,45 @@ var_dump($name);
 
 var_dump($newName);
 // ['Rootimes', 'blog'];
+```
+
+避免使用全域函式， php 本身沒有 namespace 會導致衝突
+#### 舉例
+
+```php
+function config(): array
+{
+    return [
+        'foo' => 'bar',
+    ];
+}
+```
+
+#### 調整
+利用類別封裝
+
+```php
+class Configuration
+{
+    private $configuration = [];
+
+    public function __construct(array $configuration)
+    {
+        $this->configuration = $configuration;
+    }
+
+    public function get(string $key): ?string
+    {
+        // null coalescing operator
+        return $this->configuration[$key] ?? null;
+    }
+}
+
+# 使用 class 
+
+$configuration = new Configuration([
+    'foo' => 'bar',
+]);
 ```
 
 ## 參考資料
