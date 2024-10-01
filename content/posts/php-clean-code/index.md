@@ -235,6 +235,24 @@ function fibonacci(int $n): int
 }
 ```
 
+封裝判斷式
+
+#### 舉例
+
+```php
+if ($article->state === 'published') {
+    // ...
+}
+```
+
+#### 調整
+
+```php
+if ($article->isPublished()) {
+    // ...
+}
+```
+
 ### For 迴圈使用
 
 避免使用意義不明的 Array
@@ -757,6 +775,8 @@ class DBConnection
 ```php
 $connection = new DBConnection($dsn);
 ```
+
+
 
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
