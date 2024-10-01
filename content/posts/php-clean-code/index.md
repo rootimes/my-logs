@@ -253,6 +253,25 @@ if ($article->isPublished()) {
 }
 ```
 
+避免反向的判斷情形
+
+#### 舉例
+
+```php
+if (! isDOMNodeNotPresent($node)) {
+    // ...
+}
+```
+
+#### 調整
+
+```php
+
+if (isDOMNodePresent($node)) {
+    // ...
+}
+```
+
 ### For 迴圈使用
 
 避免使用意義不明的 Array
