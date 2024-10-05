@@ -867,7 +867,64 @@ class DBConnection
 $connection = new DBConnection($dsn);
 ```
 
+### 物件與資料結構
 
+#### 使用物件封裝
+
+#### 舉例
+
+```php
+class BankAccount
+{
+    public $balance = 1000;
+}
+
+$bankAccount = new BankAccount();
+
+// Buy shoes...
+$bankAccount->balance -= 100;
+```
+
+#### 調整
+
+```php
+class BankAccount
+{
+    private $balance;
+
+    public function __construct(int $balance = 1000)
+    {
+      $this->balance = $balance;
+    }
+
+    public function withdraw(int $amount): void
+    {
+        if ($amount > $this->balance) {
+            throw new \Exception('Amount greater than available balance.');
+        }
+
+        $this->balance -= $amount;
+    }
+
+    public function deposit(int $amount): void
+    {
+        $this->balance += $amount;
+    }
+
+    public function getBalance(): int
+    {
+        return $this->balance;
+    }
+}
+
+$bankAccount = new BankAccount();
+
+// Buy shoes...
+$bankAccount->withdraw($shoesPrice);
+
+// Get balance
+$balance = $bankAccount->getBalance();~~~~
+```
 
 ## 參考資料
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
