@@ -302,6 +302,27 @@ class Cessna extends Airplane {
   }
 }
 ```
+
+避免類型檢查，使用類型聲明
+
+#### 舉例
+
+```php
+function combine($val1, $val2) {
+  if (is_numeric($val1) && is_numeric(val2)) {
+    return val1 + val2;
+  }
+
+  throw new \Exception('Must be of type Number');
+}
+```
+
+#### 調整
+
+```php
+function combine(int $val1, int $val2) {
+  return $val1 + $val2;
+}
 ```
 
 避免反向的判斷情形
