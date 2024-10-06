@@ -866,7 +866,6 @@ class DBConnection
 ```php
 $connection = new DBConnection($dsn);
 ```
-
 ### 物件與資料結構
 
 #### 使用物件封裝
@@ -919,11 +918,9 @@ class BankAccount
 
 $bankAccount = new BankAccount();
 
-// Buy shoes...
 $bankAccount->withdraw($shoesPrice);
 
-// Get balance
-$balance = $bankAccount->getBalance();~~~~
+$balance = $bankAccount->getBalance();
 ```
 
 ## 參考資料
