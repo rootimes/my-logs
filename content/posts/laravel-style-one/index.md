@@ -349,6 +349,8 @@ return back()->with('message', __('app.article_added'));
 
 ### 簡短且可讀性更好的語法
 
+ps. $request laravel 的官方範例使用 input 取值
+
 範例 | 調整
 ------------ | -------------
 `Session::get('cart')` | `session('cart')`
