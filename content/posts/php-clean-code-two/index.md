@@ -500,8 +500,8 @@ function createMicrobrewery(string $breweryName = 'Hipster Brew Co.'): void
 class Questionnaire
 {
     public function __construct(
-        string $firstname,
-        string $lastname,
+        string $firstName,
+        string $lastName,
         string $patronymic,
         string $region,
         string $district,
@@ -519,16 +519,16 @@ class Questionnaire
 ```php
 class Name
 {
-    private $firstname;
+    private $firstName;
 
-    private $lastname;
+    private $lastName;
 
     private $patronymic;
 
-    public function __construct(string $firstname, string $lastname, string $patronymic)
+    public function __construct(string $firstName, string $lastName, string $patronymic)
     {
-        $this->firstname = $firstname;
-        $this->lastname = $lastname;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
         $this->patronymic = $patronymic;
     }
 }
