@@ -218,7 +218,7 @@ function fibonacci(int $n)
 
 #### 調整
 
-使用提前回傳和整合 if 判斷條件
+使用提前回傳並整合 if 判斷條件
 
 ```php
 function fibonacci(int $n): int
