@@ -11,10 +11,6 @@ tags = [
 description = "PHP 的 clean code 範例 (二)"
 +++
 
-## PHP Clean Code
-
-Clean Code 是一種精神，本篇主要蒐集在 PHP 這個語法的實踐
-
 ### For 迴圈使用
 
 避免使用意義不明的 Array
