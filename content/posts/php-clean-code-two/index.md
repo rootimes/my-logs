@@ -48,6 +48,7 @@ foreach ($locations as $location) {
     dispatch($location);
 }
 ```
+
 ```php
 $locations = ['Austin', 'New York', 'San Francisco'];
 
@@ -380,6 +381,7 @@ class BetterPHPAlternative
 ```
 
 函式內不要使用 boolean 作為區分，函式功能違反單一職責原則
+
 #### 舉例
 
 ```php
@@ -448,6 +450,7 @@ var_dump($newName);
 ```
 
 避免使用全域函式， php 本身沒有 namespace 會導致衝突
+
 #### 舉例
 
 ```php
@@ -460,6 +463,7 @@ function config(): array
 ```
 
 #### 調整
+
 利用類別封裝
 
 ```php
@@ -490,6 +494,7 @@ $configuration = new Configuration([
 
 1. 隱藏了應用的依賴關係
 2. 不僅負責自身的邏輯，還負責自己的創建和生命週期管理
+
 #### 舉例
 
 ```php
@@ -532,9 +537,11 @@ class DBConnection
     // ...
 }
 ```
+
 ```php
 $connection = new DBConnection($dsn);
 ```
+
 ### 物件與資料結構
 
 #### 使用物件封裝
@@ -593,6 +600,7 @@ $balance = $bankAccount->getBalance();
 ```
 
 ## 參考資料
+
 [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
 
 ## 免責聲明
