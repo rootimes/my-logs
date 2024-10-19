@@ -8,22 +8,23 @@ categories = [
 tags = [
     "basic",
 ]
-description = "SOLID 介紹"
+description = "SOLID 介紹與例子"
 +++
 
 ## 介紹
+
 源自於 [Robert Cecil Martin](https://en.wikipedia.org/wiki/Robert_C._Martin) 等人的倡議，主要有五個核心原則
 
 ## 舉例
 
 ### Single-responsibility principle (SRP) 單一職責原則
 
-定義：一個模組只有一個理由會使其改變
+定義：一個模組只有一個因素會使其改變
 A class should have only one reason to change
 
 ### Open-closed principle (OCP) 開放封閉原則
 
-定義：一個軟體製品在面對擴展時是開放的，且擴充時不應修改到原有的程式
+定義：一個軟體在面對擴展時是開放的，且擴充時不應修改到原有的程式
 You should be able to extend the behavior of a system without having to modify that system.
 
 ### Liskov substitution principle (LSP) 里氏替換原則
@@ -41,6 +42,7 @@ No client should be forced to depend on methods it does not use.
 定義：高層模組不應依賴低層模組，它們都應依賴於抽象介面
 
 ## 參考資料
+
 [使人瘋狂的 SOLID 原則：單一職責原則 (Single Responsibility Principle)](https://medium.com/程式愛好者/使人瘋狂的-solid-原則-單一職責原則-single-responsibility-principle-c2c4bd9b4e79)
 [使人瘋狂的 SOLID 原則：開放封閉原則 (Open-Closed Principle)](https://medium.com/程式愛好者/使人瘋狂的-solid-原則-開放封閉原則-open-closed-principle-f7eaf921eb9c)
 [使人瘋狂的 SOLID 原則：里氏替換原則 (Liskov Substitution Principle)](https://medium.com/程式愛好者/使人瘋狂的-solid-原則-里氏替換原則-liskov-substitution-principle-e66659344aed)
