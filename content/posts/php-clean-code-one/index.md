@@ -26,6 +26,7 @@ $ymdstr = $moment->format('y-m-d');
 ```
 
 #### 調整
+
 ```php
 $currentDate = $moment->format('y-m-d');
 ```
@@ -42,6 +43,7 @@ getUserProfile();
 ```
 
 #### 調整
+
 ```php
 getUser();
 ```
@@ -56,6 +58,7 @@ $json = $serializer->serialize($data, 448);
 ```
 
 #### 調整
+
 ```php
 $json = $serializer->serialize($data, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 ```
@@ -79,6 +82,7 @@ $user->access ^= 2;
 ```
 
 #### 調整
+
 ```php
 class User
 {
@@ -115,6 +119,7 @@ saveCityZipCode($matches[1], $matches[2]);
 ```
 
 #### 調整
+
 ```php
 $address = 'One Infinite Loop, Cupertino 95014';
 $cityZipCodeRegex = '/^[^,]+,\s*(?<city>.+?)\s*(?<zipCode>\d{5})$/';
@@ -141,6 +146,7 @@ class Car
 ```
 
 #### 調整
+
 ```php
 class Car
 {
