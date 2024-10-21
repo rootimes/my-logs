@@ -7,7 +7,7 @@ defaultContentLanguage = "zh-TW"
 theme = "hugo-theme-tailwind"
 
 [markup]
-  _merge = "deep"
+_merge = "deep"
 
 [taxonomies]
 category = "categories"

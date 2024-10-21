@@ -2,6 +2,13 @@
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = {{ .Date }}
 draft = true
+categories = [
+    "category",
+]
+tags = [
+    "tag",
+]
+description = "這是一則描述"
 +++
 
 ## 前置

@@ -2,11 +2,11 @@
 title = 'Laravel Style'
 date = 2024-09-19T23:04:43+08:00
 draft = false
-tags = [
-    "laravel",
-]
 categories = [
     "coding-style",
+]
+tags = [
+    "laravel",
 ]
 description = "Laravel 的 coding style 整理"
 +++
@@ -348,6 +348,8 @@ return back()->with('message', __('app.article_added'));
 ```
 
 ### 簡短且可讀性更好的語法
+
+ps. $request laravel 的官方範例使用 input 取值
 
 範例 | 調整
 ------------ | -------------
