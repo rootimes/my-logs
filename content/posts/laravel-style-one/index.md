@@ -60,12 +60,14 @@ public function getFullNameShort(): string
 ```
 
 #### 舉例 : 程式碼中註釋
+
 ```php
 // 確定是否有任何 Join
 if (count((array) $builder->getQuery()->joins) > 0)
 ```
 
 #### 調整
+
 ```php
 if ($this->hasJoins())
 ```
@@ -172,6 +174,7 @@ public function store(Request $request)
 ```
 
 #### 調整
+
 ```php
 public function store(PostRequest $request)
 {
@@ -192,6 +195,7 @@ class PostRequest extends Request
 ```
 
 #### 舉例 : Resource
+
 ```php
 public function index(Request $request)
 {
@@ -204,6 +208,7 @@ public function index(Request $request)
 ```
 
 #### 調整 
+
 ```php
 public function index(Request $request)
 {
@@ -239,6 +244,7 @@ public function show(Request $request)
 有時帶來很高的耦合性，在開發上反而更加困難
 
 #### 舉例 : Eloquent Scope
+
 ```php
 public function getActive()
 {
@@ -254,6 +260,7 @@ public function getArticles()
 ```
 
 #### 調整
+
 ```php
 public function scopeActive($q)
 {
@@ -280,6 +287,7 @@ Laravel 為避免批量賦值導致非預期變更，提供了 $fillable 和 $gu
 如果使用手動賦值，不受此限
 
 #### 舉例
+
 ```php
 $article = new Article;
 $article->title = $request->title;
@@ -292,6 +300,7 @@ $article->save();
 ```
 
 #### 調整
+
 ```php
 $category->article()->create($request->validated());
 ```
@@ -328,6 +337,7 @@ $users = User::with('profile')->get();
 ### 使用 config 和 enum 代替重複性文字
 
 #### 舉例
+
 ```php
 public function isNormal()
 {
@@ -338,6 +348,7 @@ return back()->with('message', 'Your article has been added!');
 ```
 
 #### 調整
+
 ```php
 public function isNormal()
 {
@@ -351,34 +362,36 @@ return back()->with('message', __('app.article_added'));
 
 ps. $request laravel 的官方範例使用 input 取值
 
-範例 | 調整
------------- | -------------
-`Session::get('cart')` | `session('cart')`
-`$request->session()->get('cart')` | `session('cart')`
-`Session::put('cart', $data)` | `session(['cart' => $data])`
-`$request->input('name'), Request::get('name')` | `$request->name, request('name')`
-`return Redirect::back()` | `return back()`
-`is_null($object->relation) ? null : $object->relation->id` | `optional($object->relation)->id`
-`return view('index')->with('title', $title)->with('client', $client)` | `return view('index', compact('title', 'client'))`
-`$request->has('value') ? $request->value : 'default';` | `$request->get('value', 'default')`
-`Carbon::now(), Carbon::today()` | `now(), today()`
-`App::make('Class')` | `app('Class')`
-`->where('column', '=', 1)` | `->where('column', 1)`
-`->orderBy('created_at', 'desc')` | `->latest()`
-`->orderBy('age', 'desc')` | `->latest('age')`
-`->orderBy('created_at', 'asc')` | `->oldest()`
-`->select('id', 'name')->get()` | `->get(['id', 'name'])`
-`->first()->name` | `->value('name')`
+| 範例                                                                   | 調整                                               |
+| ---------------------------------------------------------------------- | -------------------------------------------------- |
+| `Session::get('cart')`                                                 | `session('cart')`                                  |
+| `$request->session()->get('cart')`                                     | `session('cart')`                                  |
+| `Session::put('cart', $data)`                                          | `session(['cart' => $data])`                       |
+| `$request->input('name'), Request::get('name')`                        | `$request->name, request('name')`                  |
+| `return Redirect::back()`                                              | `return back()`                                    |
+| `is_null($object->relation) ? null : $object->relation->id`            | `optional($object->relation)->id`                  |
+| `return view('index')->with('title', $title)->with('client', $client)` | `return view('index', compact('title', 'client'))` |
+| `$request->has('value') ? $request->value : 'default';`                | `$request->get('value', 'default')`                |
+| `Carbon::now(), Carbon::today()`                                       | `now(), today()`                                   |
+| `App::make('Class')`                                                   | `app('Class')`                                     |
+| `->where('column', '=', 1)`                                            | `->where('column', 1)`                             |
+| `->orderBy('created_at', 'desc')`                                      | `->latest()`                                       |
+| `->orderBy('age', 'desc')`                                             | `->latest('age')`                                  |
+| `->orderBy('created_at', 'asc')`                                       | `->oldest()`                                       |
+| `->select('id', 'name')->get()`                                        | `->get(['id', 'name'])`                            |
+| `->first()->name`                                                      | `->value('name')`                                  |
 
 ### 使用 IoC Container 或 Facade 而不是直接 new Class
 
 #### 舉例
+
 ```php
 $user = new User;
 $user->create($request->validated());
 ```
 
 #### 調整
+
 ```php
 public function __construct(User $user)
 {
@@ -393,11 +406,13 @@ $this->user->create($request->validated());
 ### 使用 config 統一取得 .env 參數
 
 #### 舉例
+
 ```php
 $apiUrl = env('API_URL');
 ```
 
 #### 調整
+
 ```php
 // config/api.php
 'url' => env('API_URL'),
@@ -409,12 +424,14 @@ $apiUrl = config('api.url');
 ### 用 Carbon 操作日期時間，model 可用 casts 做轉換
 
 #### 舉例
+
 ```php
 {{ Carbon::createFromFormat('Y-d-m H-i', $object->ordered_at)->toDateString() }}
 {{ Carbon::createFromFormat('Y-d-m H-i', $object->ordered_at)->format('m-d') }}
 ```
 
 #### 調整
+
 ```php
 // Model
 protected $casts = [
@@ -433,6 +450,7 @@ public function getSomeDateAttribute($date)
 ```
 
 ## 參考資料
+
 [Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
 ## 免責聲明
