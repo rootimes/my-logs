@@ -11,4 +11,4 @@ author = "Rootimes"
 - [ ] gitlab cicd
 - [ ] SQL index 邏輯
 - [ ] innoShop 教學
-- [ ] dabby 教學
+- [ ] Tabby 教學
