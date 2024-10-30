@@ -8,3 +8,5 @@ author = "Rootimes"
 ## 清單
 
 - [ ] 圖床架設服務
+- [ ] gitlab cicd
+- [ ] 
