@@ -9,4 +9,6 @@ author = "Rootimes"
 
 - [ ] 圖床架設服務
 - [ ] gitlab cicd
-- [ ] 
+- [ ] SQL index 邏輯
+- [ ] innoShop 教學
+- [ ] dabby 教學
