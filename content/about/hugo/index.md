@@ -6,9 +6,33 @@ draft = true
 
 ## cheat sheet
 
-### 建立新文章
+### 建立文章
+
+1. 預設模板
 ```bash
-hugo new content/abouts/hugo.md
+hugo new content about/{folder}/{filename}.md
+```
+
+2. 不同的模板
+```bash
+hugo new content --kind {archetypes} about/{folder}//{filename}.md
+```
+
+### 啟動服務器
+
+1. 啟動服務器
+```bash
+hugo server
+```
+
+2. 啟動服務器，並指定 port
+```bash
+hugo server -p {port}
+```
+
+3. 啟動服務器，並查閱草稿
+```bash
+hugo server -D
 ```
 
 ## 參考資料
