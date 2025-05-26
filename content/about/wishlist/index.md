@@ -1,14 +1,11 @@
 +++
 title = "願望清單"
-description = "未來主題的待辦清單"
-date = "2024-10-28"
+description = "在 hugo 主題上的構想蒐集整理，給之後修改主題時使用"
+date = "2024-09-19"
 author = "Rootimes"
 +++
 
 ## 清單
 
-- [ ] 圖床架設服務
-- [ ] gitlab cicd
-- [ ] SQL index 邏輯
-- [ ] innoShop 教學
-- [ ] Tabby 教學
+- [ ] 當沒有 description 時，在索引頁，會出現跑版錯誤
+- [ ] 自動增加延伸閱讀的連結
