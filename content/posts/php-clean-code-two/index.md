@@ -49,6 +49,7 @@ foreach ($locations as $location) {
 }
 ```
 
+命名 Array 變數要有意義
 ```php
 $locations = ['Austin', 'New York', 'San Francisco'];
 
@@ -410,6 +411,7 @@ function createTempFile(string $name): void
 ```
 
 函式內不僅僅有回傳，還有改變外部的值，這將更難維護
+
 函式目的請單一化
 
 #### 舉例
