@@ -1,7 +1,7 @@
 +++
-title = 'PHP Clean Cod Two'
+title = 'PHP Clean Code Two'
 date = 2024-09-21T02:19:11+08:00
-draft = true
+draft = false
 categories = [
     "coding-style",
 ]

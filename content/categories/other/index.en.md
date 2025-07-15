@@ -1,4 +1,0 @@
-+++
-title = "other"
-slug = "other"
-+++

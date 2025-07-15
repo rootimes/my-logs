@@ -1,4 +1,0 @@
-+++
-title = "lab"
-slug = "lab"
-+++

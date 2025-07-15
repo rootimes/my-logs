@@ -1,4 +1,0 @@
-+++
-title = "basic"
-slug = "basic"
-+++

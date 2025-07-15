@@ -1,4 +1,0 @@
-+++
-title = "manager"
-slug = "manager"
-+++

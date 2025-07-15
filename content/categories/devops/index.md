@@ -1,4 +1,0 @@
-+++
-title = "devops"
-slug = "devops"
-+++

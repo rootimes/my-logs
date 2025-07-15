@@ -1,6 +1,12 @@
 +++
 title = 'AI Prompt 26 tips'
 date = 2025-05-25T16:11:51+08:00
+categories = [
+    "AI",
+]
+tags = [
+    "basic",
+]
 description = "AI Prompt 的 26 個指令技巧"
 +++
 
