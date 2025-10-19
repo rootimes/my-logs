@@ -1,4 +1,0 @@
-+++
-title = "golang"
-slug = "golang"
-+++

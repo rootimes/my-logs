@@ -1,4 +1,0 @@
-+++
-title = "laravel"
-slug = "laravel"
-+++

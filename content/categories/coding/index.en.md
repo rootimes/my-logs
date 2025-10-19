@@ -1,4 +1,0 @@
-+++
-title = "coding"
-slug = "coding"
-+++

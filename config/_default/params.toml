@@ -44,7 +44,6 @@ showAuthor = true
     reactionsEnabled = "1"
     emitMetadata = "0"
     inputPosition = "bottom"
-    
 
 [social_media]
     [[social_media.items]]
@@ -52,3 +51,11 @@ showAuthor = true
     title = 'Github'
     icon = 'brand-github'
     link = 'https://github.com/rootimes'
+
+[sidebar]
+  limit = 10
+
+[taxonomies.icons]
+  categories = "category-2"
+  tags = "hash"
+  series = "bookmark"

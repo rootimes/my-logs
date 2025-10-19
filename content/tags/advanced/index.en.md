@@ -1,4 +1,0 @@
-+++
-title = "advanced"
-slug = "advanced"
-+++

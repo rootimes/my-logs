@@ -1,4 +1,0 @@
-+++
-title = "gitlab"
-slug = "gitlab"
-+++

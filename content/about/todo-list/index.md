@@ -10,7 +10,7 @@ author = "Rootimes"
 - [ ] 圖床架設服務
 - [ ] gitlab cicd
 - [ ] SQL index 邏輯
-- [ ] innoShop 教學
-- [ ] Tabby 教學
 - [ ] k8s 部屬 laravel 服務
 - [ ] hugo 的 cheat sheet
+- [ ] laravel 源碼解析
+- [ ] project graph 架設
