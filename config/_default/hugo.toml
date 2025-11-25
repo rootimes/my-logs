@@ -4,7 +4,7 @@ copyright = "Rootimes"
 pagerSize = 5
 languageCode = "zh-TW"
 defaultContentLanguage = "zh-TW"
-theme = "hugo-theme-tailwind"
+theme = "tailwind"
 
 [markup]
 _merge = "deep"
