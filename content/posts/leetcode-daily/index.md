@@ -47,6 +47,14 @@ description = "每天的 leetcode 解題暫時紀錄"
 
 - 關鍵 2 : 只要 preFixSum[index] 兩個位置的 index 對 k 取模後一樣，它們之間的子陣列長度就是 k 的倍數
 
+### 2872. Maximum Number of K-Divisible Components
+
+- 目標 : 將樹分割成 k 個可連通的元件，找出最大可分割的元件數量
+
+- 關鍵 1 : 使用深度優先搜尋 (DFS) 來遍歷樹
+
+- 關鍵 2 : 在 DFS 過程中，計算每個子樹的節點數量，若子樹節點數量能被 k 整除，則該子樹可以成為一個獨立的元件
+
 
 ## 免責聲明
 
