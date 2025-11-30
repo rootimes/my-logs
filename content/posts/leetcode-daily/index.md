@@ -55,6 +55,9 @@ description = "每天的 leetcode 解題暫時紀錄"
 
 - 關鍵 2 : 在 DFS 過程中，計算每個子樹的節點數量，若子樹節點數量能被 k 整除，則該子樹可以成為一個獨立的元件
 
+### 3512. Minimum Operations to Make Array Sum Divisible by K
+
+- 目標 : 找出最少的操作次數，使得陣列總和能被 k 整除
 
 ## 免責聲明
 
