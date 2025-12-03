@@ -39,7 +39,7 @@ description = "每天的 leetcode 解題暫時紀錄"
 
 - 關鍵 5 : 最終答案為 dp[m - 1][n - 1][0]，表示到達右下角且數字總和能被 k 整除的路徑數量
 
-### 3381. Maximum Subarray Sum With Length Divisible by K
+### 3381. Maximum SubArray Sum With Length Divisible by K
 
 - 目標 : 找出子陣列長度能被 k 整除的最大子陣列總合
 
