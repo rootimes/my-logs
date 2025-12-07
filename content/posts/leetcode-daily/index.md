@@ -106,6 +106,14 @@ description = "每天的 leetcode 解題暫時紀錄"
 
 - 關鍵 2 : 只跟總和 S 有關，  L - R = L - (S - L) = 2L - S
 
+### 1523. Count Odd Numbers in an Interval Range
+
+- 目標 : 計算區間 [low, high] 中的奇數數量
+
+- 關鍵 1 : 基數表達式 2n - 1
+
+- 關鍵 2 : (n + 1) / 2 代表 1 ~ n 中奇數的數量
+
 ## 免責聲明
 
 以上內容算是個人的筆記，可能有誤或較多引用，期望能拋磚引玉
