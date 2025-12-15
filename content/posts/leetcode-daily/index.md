@@ -120,6 +120,12 @@ description = "每天的 leetcode 解題暫時紀錄"
 
 - 進階 1 : 有多少個 (i,j)，滿足 i<j<k , 且 nums[i]=x 且 nums[j]= x/2, 利用哈希表紀錄
 
+### 2110. Number of Smooth Descent Periods of a Stock
+
+- 目標 : 計算股票價格平滑下降期間的數量，間格為 1
+
+- 關鍵 1 : 計算區間長度，單一也是平滑下降期間，沒有中斷就繼續計算
+
 
 ## 免責聲明
 
