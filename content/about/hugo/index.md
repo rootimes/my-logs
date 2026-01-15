@@ -15,7 +15,7 @@ hugo new content about/{folder}/{filename}.md
 
 2. 不同的模板
 ```bash
-hugo new content --kind {archetypes} about/{folder}//{filename}.md
+hugo new content --kind {archetypes} {folder}/{filename}.md
 ```
 
 ### 啟動服務器
