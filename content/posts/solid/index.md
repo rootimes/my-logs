@@ -48,9 +48,3 @@ No client should be forced to depend on methods it does not use.
 [使人瘋狂的 SOLID 原則：里氏替換原則 (Liskov Substitution Principle)](https://medium.com/程式愛好者/使人瘋狂的-solid-原則-里氏替換原則-liskov-substitution-principle-e66659344aed)
 [使人瘋狂的 SOLID 原則：介面隔離原則 (Interface Segregation Principle)](https://medium.com/程式愛好者/使人瘋狂的-solid-原則-介面隔離原則-interface-segregation-principle-50f54473c79e)
 [使人瘋狂的 SOLID 原則：依賴反向原則 (Dependency Inversion Principle)](https://medium.com/程式愛好者/使人瘋狂的-solid-原則-依賴反向原則-dependency-inversion-principle-a74ca045d776)
-
-## 免責聲明
-
-以上內容算是個人的筆記，可能有誤或較多引用，期望能拋磚引玉
-
-歡迎大家在底下補充與討論

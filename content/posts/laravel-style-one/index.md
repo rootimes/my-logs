@@ -453,8 +453,3 @@ public function getSomeDateAttribute($date)
 
 [Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
 
-## 免責聲明
-
-以上內容算是個人的筆記，可能有誤或較多引用，期望能拋磚引玉
-
-歡迎大家在底下補充與討論

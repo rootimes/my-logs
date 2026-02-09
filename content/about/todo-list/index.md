@@ -14,3 +14,5 @@ author = "Rootimes"
 - [ ] hugo 的 cheat sheet
 - [ ] laravel 源碼解析
 - [ ] project graph 架設
+- [ ] java 學習
+- [ ] spring boot 學習
