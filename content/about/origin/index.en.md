@@ -1,30 +1,30 @@
 +++
-title = "關於這裡"
-description = "這裡是 Rootimes 的筆記站，來源多是蒐集與經驗所得"
+title = "About This Site"
+description = "This is Rootimes' notes site, sourced from collections and experience"
 date = "2024-09-12"
 aliases = ["about-rootimes", "contact"]
 author = "Rootimes"
 weight = 1
 +++
 
-## 建站原因
+## Why I Built This Site
 
-建立此站，評估很多時間
+It took considerable time to evaluate before establishing this site.
 
-面對程式領域，有如一葉小舟飄盪在汪洋大海
+Facing the field of programming feels like being a small boat adrift on a vast ocean.
 
-許多的知識與工具，過眼雲煙
+So much knowledge and so many tools pass by like fleeting clouds.
 
-不僅如此，隨著時間的進展，技術的進步速度，真的讓人一日三秋，一不留神，恍如隔世
+Moreover, as time progresses and technology advances at such a rapid pace, it truly makes one feel that each day is like three autumns—one moment of inattention and it feels like a lifetime has passed.
 
-憑著自己對著程式的熱情，也為了能夠與他人分享，能夠多交流
+Driven by my passion for programming and the desire to share and communicate with others,
 
-最終決定利用 Blog 來收納自己的學習
+I finally decided to use this blog to document my learning journey.
 
-內容大多是蒐集而來，會盡量附上參考，也會增加一些自己的看法
+Most of the content is collected from various sources. I will do my best to provide references and add my own perspectives.
 
-本就拋磚引玉，歡迎大家利用底下的評論，有想法就一起討論
+This is meant to spark discussion. Everyone is welcome to use the comments below to share your thoughts and join the conversation.
 
-最後，各位看官與大佬們，多多指教
+Finally, to all readers and experts, your guidance is much appreciated.
 
-願在程式的世界中，你我一同努力
+May we continue to strive together in the world of programming.
