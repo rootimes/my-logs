@@ -73,7 +73,7 @@ public double calcUserOrder(User user, double price, int quantity) {
 
 確保實作層的計算邏輯純粹且單一。
 
-## 漂移的職責
+## 說不準的職責
 
 最容易讓人困惑的地方：
 
@@ -142,8 +142,7 @@ public class OrderRepository {
 - 行銷部 → 關注報表格式與呈現  
 - 設計部 → 關注回傳格式與互動  
 
-
-**這其實代表要考量組織結構**
+**這代表要考量組織結構**
 
 在小團隊中，行銷與財務可能是同一人。
 這時候，你的類別可能不需要拆得太細。
@@ -152,7 +151,6 @@ public class OrderRepository {
 原本的「單一職責」可能會變得臃腫。
 
 此時，就必須隨著時間與組織演進，重新調整邊界。
-
 
 ### 核心目的：內聚 (Cohesion)
 
