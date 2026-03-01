@@ -1,6 +1,6 @@
 +++
 title = 'SOLID：單一職責原則 (SRP)'
-date = 2024-10-16T23:42:03+08:00
+date = 2026-02-19T23:42:03+08:00
 draft = false
 tags = [
     "basic",
@@ -36,7 +36,7 @@ Uncle Bob 後來更精確地定義了所謂的「理由」：
 
 ### 程式舉例：糾纏的職責
 
-``` java
+```java
 
 // 這是一個違反 SRP 的函式例子
 
@@ -57,7 +57,7 @@ public double calcUserOrder(User user, double price, int quantity) {
 
 理想上我們應該這樣寫
 
-``` java
+```java
 public double calcVipOrder(User user, double price, int quantity) {
   return price * quantity * VIP_DISCOUNT;
 }
@@ -78,7 +78,6 @@ public double calcUserOrder(User user, double price, int quantity) {
 最容易讓人困惑的地方：
 
 > 那件事，到底可以有多大？
->
 > 職責可以多廣？
 
 當尺度放大到類別時，又或是套件時，職責往往與「誰在對這段程式碼提要求」有關。

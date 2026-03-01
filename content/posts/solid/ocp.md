@@ -1,6 +1,6 @@
 +++
 title = 'SOLID：開放封閉原則 (OCP)'
-date = 2024-10-16T23:42:03+08:00
+date = 2026-02-22T23:42:03+08:00
 draft = false
 tags = [
     "basic",
