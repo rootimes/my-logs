@@ -1,5 +1,5 @@
 +++
-title = 'Spring Sparrow'
+title = 'Spring Sparrow One'
 date = 2026-03-04T11:00:41+08:00
 draft = true
 tags = [
@@ -23,6 +23,8 @@ mvn archetype:generate -DgroupId=sparrow -DartifactId=legacy -DarchetypeArtifact
 
 ### 加入 Spring dependency
 
+在 `pom.xml` 中加入 `spring-context`，它會自動包含 `spring-core`、`spring-beans` 與 `spring-aop` 等核心模組：
+
 ```xml
 <dependencies>
     <dependency>
@@ -36,11 +38,15 @@ mvn archetype:generate -DgroupId=sparrow -DartifactId=legacy -DarchetypeArtifact
 ### 嘗試編譯
 
 ```bash
-cd folder
+cd legacy # 進入 artifactId 定義的資料夾
 mvn compile
 ```
 
 ## 創建一個 Bean
+
+Spring 的核心在於 **IoC (Inversion of Control, 控制反轉)** 與 **DI (Dependency Injection, 依賴注入)**。
+
+開發者將物件的生命週期管理交給容器（IoC），並透過注入的方式解決物件間的依賴關係（DI）。
 
 ### GenericApplicationContext
 
@@ -168,14 +174,14 @@ public class HelloBean {
 
 ### @ComponentScan
 
-表示 Spring 需要掃描指定 package 下的類，
+表示 Spring 需要掃描指定 package 下的類，並將帶有以下註解的類註冊為 Bean：
 
-將以下幾種註解的類註冊為 Bean：
+- **@Component**：最基礎的組件註解。
+- **@Service**：表示業務邏輯層。
+- **@Repository**：表示數據訪問層（DAO），並具備數據庫異常轉換功能。
+- **@Controller**：表示控制層（MVC）。
 
-- @Component
-- @Service
-- @Repository
-- @Controller
+這些註解本質上都是 `@Component` 的特化（Stereotype）。
 
 ```java
 @Configuration
@@ -186,14 +192,18 @@ public class AppConfig {
 
 ### @Autowired
 
-表示 Spring 會自動注入依賴的 Bean，可以用在構造器、方法或字段上
+表示 Spring 會自動注入依賴的 Bean。
+
+建議優先使用 **建構子注入 (Constructor Injection)**，因為它能確保依賴項不為 null 且方便進行單元測試。
+
+*註：從 Spring 4.3 開始，如果類別只有一個建構子，`@Autowired` 註解可以省略。*
 
 ```java
 @Service
 public class OrderService {
     private final UserService userService;
 
-    @Autowired
+    // 只有一個建構子時，@Autowired 可省略
     public OrderService(UserService userService) {
         this.userService = userService;
     }
