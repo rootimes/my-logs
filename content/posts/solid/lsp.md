@@ -207,7 +207,6 @@ public void testShapeArea(Shape shape) {
 軟體開發中有一項重要的概念：
 
 > 針對**抽象**寫程式，而非針對實作寫程式
-
 > (Programming to an abstraction, not an implementation)
 
 堅守 LSP 能帶來以下好處：

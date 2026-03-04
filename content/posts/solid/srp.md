@@ -129,7 +129,7 @@ public class OrderRepository {
 }
 ```
 
-### 依照 Uncle Bob 的說明：
+### 依照 Uncle Bob 的說明
 
 > **只為一個利益關係人（Actor）負責**
 
@@ -141,7 +141,7 @@ public class OrderRepository {
 - 行銷部 → 關注報表格式與呈現  
 - 設計部 → 關注回傳格式與互動  
 
-**這代表要考量組織結構**
+#### 這代表要考量組織結構
 
 在小團隊中，行銷與財務可能是同一人。
 這時候，你的類別可能不需要拆得太細。
