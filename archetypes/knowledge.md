@@ -19,10 +19,6 @@ description = "這是一則描述"
 
 ### 知識
 
-需要知道的觀念與知識
-
-#### 說明 & 舉例
-
 ## 參考資料
-[示範連結](https://example.com)
 
+[示範連結](https://example.com)

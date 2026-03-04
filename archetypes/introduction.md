@@ -15,7 +15,7 @@ description = "這是一則描述"
 
 提供前置的狀態，避免因初始條件不同導致的潛在錯誤
 
-```
+```yaml
 ## 系統
 ubuntu 24.04
 ```
@@ -37,5 +37,5 @@ ubuntu 24.04
 #### 與相似的比較
 
 ## 參考資料
-[示範連結](https://example.com)
 
+[示範連結](https://example.com)
