@@ -5,7 +5,7 @@ draft = true
 tags = [
     "spring",
 ]
-description = "這是一則描述"
+description = "Spring Framework 入門介紹 Bean 篇章"
 +++
 
 ## 啟動專案
