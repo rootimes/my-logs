@@ -1,5 +1,5 @@
 +++
-title = 'Isp'
+title = 'SOLID：里氏替換原則 (ISP)'
 date = 2026-03-05T00:34:04+08:00
 draft = false
 tags = [
@@ -28,7 +28,9 @@ SOLID 是由 [Robert Cecil Martin](https://en.wikipedia.org/wiki/Robert_C._Marti
 
 ## ISP：介面隔離原則 (Interface Segregation Principle)
 
-ISP 的核心為：**不應強迫客戶端依賴它們不使用的方法。**
+>**不應強迫客戶端依賴它們不使用的方法。**
+>(No client should be forced to depend on methods it does not use.
+)
 
 這項原則強調應該將大型、臃腫的介面（Fat Interface）拆分成更小、更專注的介面。
 
