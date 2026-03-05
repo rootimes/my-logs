@@ -1,5 +1,5 @@
 +++
-title = 'SOLID：里氏替換原則 (ISP)'
+title = 'SOLID：依賴反轉原則 (ISP)'
 date = 2026-03-05T00:34:04+08:00
 draft = false
 tags = [
