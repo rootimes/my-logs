@@ -5,7 +5,7 @@ draft = true
 tags = [
     "spring",
 ]
-description = "Spring Sparrow 入門介紹：JPA 篇章"
+description = "Spring Framework 入門介紹：JPA 篇章"
 +++
 
 ## 使用 JPA 連接 MySql 的前置處理
