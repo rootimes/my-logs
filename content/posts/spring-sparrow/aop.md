@@ -1,5 +1,5 @@
 +++
-title = 'Spring Sparrow Two'
+title = 'Spring Sparrow AOP'
 date = 2026-03-04T16:44:22+08:00
 draft = true
 tags = [
@@ -8,7 +8,7 @@ tags = [
 description = "Spring Framework 入門介紹：AOP 篇章"
 +++
 
-## 使用 AOP 實作 Bean 的前置處理
+## 使用 AOP
 
 AOP (Aspect-Oriented Programming, 切面導向程式設計) 允許開發者將「切面關注點」（如日誌、安全、事務管理）從業務邏輯中分離。
 

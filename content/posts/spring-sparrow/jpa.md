@@ -1,5 +1,5 @@
 +++
-title = 'Spring Sparrow Three'
+title = 'Spring Sparrow JPA'
 date = 2026-03-04T18:50:49+08:00
 draft = true
 tags = [
@@ -8,7 +8,7 @@ tags = [
 description = "Spring Framework 入門介紹：JPA 篇章"
 +++
 
-## 使用 JPA 連接 MySql 的前置處理
+## 使用 JPA 連接 MySql
 
 ### 加入相關依賴
 
@@ -179,7 +179,9 @@ public class JPAMySqlConfig {
 }
 ```
 
-### 實作 Entity 類別
+## 新增一個使用者
+
+### Entity 類別實作
 
 **Entity** 是記憶體中的 Java 類別，透過 JPA 註解與資料庫中的資料表進行映射綁定。
 
@@ -212,7 +214,7 @@ public class User {
 }
 ```
 
-### 實作 Repository 類別
+### Repository 類別實作
 
 宣告 Repository 介面並繼承 JpaRepository。
 

@@ -1,11 +1,11 @@
 +++
-title = 'Spring Sparrow One'
+title = 'Spring Sparrow Start'
 date = 2026-03-04T11:00:41+08:00
 draft = true
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：Bean 篇章"
+description = "Spring Framework 入門介紹：初始篇章"
 +++
 
 ## 啟動專案
