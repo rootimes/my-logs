@@ -5,7 +5,7 @@ draft = true
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹 AOP 篇章"
+description = "Spring Framework 入門介紹：AOP 篇章"
 +++
 
 ## 使用 AOP 實作 Bean 的前置處理
