@@ -57,7 +57,7 @@ public class LoggingAspect {
 @Configuration
 @ComponentScan(basePackages = "sparrow") // 掃描 sparrow 套件下的元件
 @EnableAspectJAutoProxy // 啟用 AOP 功能
-public class ProjectConfig {
+public class AppConfig {
     @Bean
     public MessageService messageService() {
         return new MessageService();

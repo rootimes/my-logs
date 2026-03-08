@@ -237,7 +237,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 這是一個將 Entity 寫入資料庫的簡單範例。
 
 ```java
- GenericApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+ GenericApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
     try {
       UserRepository userRepository = context.getBean(UserRepository.class);

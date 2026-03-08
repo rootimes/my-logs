@@ -30,7 +30,7 @@ mvn archetype:generate -DgroupId=sparrow -DartifactId=legacy -DarchetypeArtifact
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>6.1.4</version>
+        <version>6.1.5</version>
     </dependency>
 </dependencies>
 ```
