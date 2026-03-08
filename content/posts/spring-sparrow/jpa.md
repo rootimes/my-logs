@@ -25,19 +25,19 @@ description = "Spring Framework 入門介紹：JPA 篇章"
     <dependency>
     <groupId>ch.qos.logback</groupId>
     <artifactId>logback-classic</artifactId>
-    <version>1.4.14</version>
+    <version>1.5.32</version>
     </dependency>
 
     <dependency>
       <groupId>org.hibernate.orm</groupId>
       <artifactId>hibernate-core</artifactId>
-      <version>6.4.4.Final</version>
+      <version>7.2.5.Final</version>
     </dependency>
 
     <dependency>
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
-      <version>8.0.33</version>
+      <version>9.6.0</version>
     </dependency>
 
     <dependency>
@@ -49,13 +49,13 @@ description = "Spring Framework 入門介紹：JPA 篇章"
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-orm</artifactId>
-      <version>6.1.5</version>
+      <version>7.0.5</version>
     </dependency>
 
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-jpa</artifactId>
-      <version>3.2.4</version>
+      <version>4.0.3</version>
     </dependency>
 ```
 

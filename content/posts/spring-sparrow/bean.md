@@ -21,16 +21,17 @@ mvn archetype:generate -DgroupId=sparrow -DartifactId=legacy -DarchetypeArtifact
 - DarchetypeArtifactId : 專案模板
 - DinteractiveMode : 跳出詢問視窗
 
-### 加入 Spring dependency
+### 加入 Spring Framework 相關依賴
 
-在 `pom.xml` 中加入 `spring-context`，它會自動包含 `spring-core`、`spring-beans` 與 `spring-aop` 等核心模組：
+在 `pom.xml` 中加入 `spring-context`，
+它會自動包含 `spring-core`、`spring-beans` 與 `spring-aop` 等核心模組：
 
 ```xml
 <dependencies>
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>6.1.5</version>
+        <version>7.0.5</version>
     </dependency>
 </dependencies>
 ```
