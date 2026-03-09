@@ -74,11 +74,12 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "sparrow")
-public class WebConfig {
+public class WebConfig implements WebMvcConfigurer {
     
 }
 ```
@@ -222,7 +223,7 @@ url: <http://localhost:8080/api/status>
 
 ## 參考資料
 
-- [Spring MVC 官方文件](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
-- [Tomcat Image](https://hub.docker.com/_/tomcat)
-- [Docker Compose 官方文件](https://docs.docker.com/compose/)
-- [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
+[Spring MVC 官方文件](https://docs.spring.io/spring-framework/docs/current/reference/html/web.html)
+[Tomcat Image](https://hub.docker.com/_/tomcat)
+[Docker Compose 官方文件](https://docs.docker.com/compose/)
+[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)
