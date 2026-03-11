@@ -132,7 +132,7 @@ Ref post_tag_post_key: post_tag.post_id > posts.id
 Ref post_tag_tag_key: post_tag.tag_id > tags.id
 ```
 
-![ERD設計](./resources/erd-one.svg)
+![ERD設計](../../../images/spring-sparrow/erd-one.svg)
 
 ### 調整專案結構
 
