@@ -1,0 +1,94 @@
+Table tasks {
+  id integer [primary key]
+  user_id integer [not null]
+  name varchar(100) [not null]
+  target varchar(255)
+  deadline timestamp
+}
+
+Table users {
+  id integer [primary key]
+  role_id integer [null]
+  name varchar(50) [not null, unique]
+  password varchar(255) [not null]
+  email varchar(255) [not null, unique]
+  description varchar(500)
+}
+
+Table user_identity_accounts {
+  id integer [primary key]
+  user_id integer [not null]
+  provider_type integer [not null]
+  provider_user_id varchar(255) [not null]
+  provider json
+}
+
+Table posts {
+  id integer [primary key]
+  user_id integer [not null]
+  series_id integer
+  title varchar(100) [not null]
+  meta json
+  status tinyint [default: 0]
+}
+
+Table post_sources {
+  post_id integer [primary key]
+  source_type integer [not null]
+  source_link json
+}
+
+Table tags {
+  id integer [primary key]
+  name varchar(20) [not null, unique]
+}
+
+Table post_tag {
+  id integer [primary key]
+  post_id integer [not null]
+  tag_id integer [not null]
+}
+
+Table series {
+  id integer [primary key]
+  name varchar(20) [not null]
+  description varchar(500)
+}
+
+Table roles {
+  id integer [primary key]
+  name varchar(50) [not null, unique]
+  description varchar(255)
+}
+
+Table permissions {
+  id integer [primary key]
+  name varchar(100) [not null, unique]
+  description varchar(255)
+}
+
+Table role_permission {
+  role_id integer [not null]
+  permission_id integer [not null]
+
+  indexes {
+    (role_id, permission_id) [pk]
+  }
+}
+
+Table subscribers {
+  id integer
+  name varchar(50)
+  email varchar(100)
+}
+
+Ref user_tasks: tasks.user_id > users.id
+Ref user_posts: posts.user_id > users.id
+Ref user_role: users.role_id > roles.id
+Ref identity_user: user_identity_accounts.user_id > users.id
+Ref post_series: posts.series_id > series.id
+Ref post_tag_post_key: post_tag.post_id > posts.id
+Ref post_tag_tag_key: post_tag.tag_id > tags.id
+Ref post_source_post: post_sources.post_id > posts.id
+Ref role_permission_role_key: role_permission.role_id > roles.id
+Ref role_permission_permission_key: role_permission.permission_id > permissions.id
