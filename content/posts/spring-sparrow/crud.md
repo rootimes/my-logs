@@ -1,14 +1,11 @@
 +++
-title = 'Crud'
+title = 'Spring Sparrow CRUD'
 date = 2026-03-09T13:49:19+08:00
-draft = true
-categories = [
-    "category",
-]
+draft = false
 tags = [
-    "tag",
+    "spring",
 ]
-description = "這是一則描述"
+description = "Spring Framework 入門介紹：CRUD 篇章"
 +++
 
 ## 關注點
