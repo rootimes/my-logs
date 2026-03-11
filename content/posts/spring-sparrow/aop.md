@@ -8,6 +8,10 @@ tags = [
 description = "Spring Framework 入門介紹：AOP 篇章"
 +++
 
+## 關注點
+
+1. Spring Framework 的 AOP 功能與應用舉例。
+
 ## 使用 AOP
 
 AOP (Aspect-Oriented Programming, 切面導向程式設計) 允許開發者將「切面關注點」（如日誌、安全、事務管理）從業務邏輯中分離。

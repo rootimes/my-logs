@@ -8,6 +8,10 @@ tags = [
 description = "Spring Framework 入門介紹：REST Docs 篇章"
 +++
 
+## 關注點
+
+1. Spring REST Docs 服務的啟動，生成 API 文件，並將文件部署到網頁上供外部訪問。
+
 ## Spring REST Docs
 
 ### 什麼是 Spring REST Docs？
@@ -100,7 +104,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.restdocs.RestDocumentationContextProvider;
 import org.springframework.restdocs.RestDocumentationExtension;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
@@ -108,7 +111,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 @ExtendWith({ SpringExtension.class, RestDocumentationExtension.class })
-@ContextConfiguration(classes = { AppTest.TestConfig.class })
 @WebAppConfiguration
 public class RestDocsTest {
     protected MockMvc mockMvc;
@@ -133,21 +135,18 @@ import static org.springframework.restdocs.payload.PayloadDocumentation.fieldWit
 import static org.springframework.restdocs.payload.PayloadDocumentation.responseFields;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import sparrow.config.WebConfig;
+
 
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import sparrow.controller.ApiController;
+import sparrow.controller.Controller;
 
+@ContextConfiguration(classes = { WebConfig.class })
 public class AppTest extends RestDocsTest {
-    @Configuration
-    @EnableWebMvc
-    @ComponentScan(basePackageClasses = ApiController.class)
-    static class TestConfig {
-    }
-
     @Test
     public void documentGetStatusApi() throws Exception {
         this.mockMvc.perform(get("/api/status"))
@@ -254,7 +253,6 @@ public class WebConfig implements WebMvcConfigurer {
                 .addResourceLocations("classpath:/static/docs/");
     }
 }
-
 ```
 
 ### 測試網頁

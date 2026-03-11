@@ -8,6 +8,10 @@ tags = [
 description = "Spring Framework 入門介紹：JPA 篇章"
 +++
 
+## 關注點
+
+1. 使用 JPA 連接 MySql，連通創建資料。
+
 ## 使用 JPA 連接 MySql
 
 ### 加入相關依賴
@@ -268,7 +272,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ## 參考資料
 
-[Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference)
+[Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
+
 [JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
+
 [Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
+
 [MAVEN Dependency](https://mvnrepository.com/)

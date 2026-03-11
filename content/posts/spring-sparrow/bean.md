@@ -8,6 +8,10 @@ tags = [
 description = "Spring Framework 入門介紹：初始篇章"
 +++
 
+## 關注點
+
+1. Spring Framework 的服務啟動流程：從建立 ApplicationContext 到註冊 Bean，再到啟動服務的整個過程。
+
 ## 啟動專案
 
 ### maven cli 建立
