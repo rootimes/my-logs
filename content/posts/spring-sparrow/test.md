@@ -373,5 +373,7 @@ include::{snippets}/post-create/http-response.adoc[]
 ## 參考資料
 
 [MockMvc 官方文件](https://docs.spring.io/spring-framework/reference/6.1/testing/spring-mvc-test-framework.html)
+
 [Spring REST Docs 官方文件](https://docs.spring.io/spring-restdocs/docs/current/reference/htmlsingle/)
+
 [Asciidoctor 官方文件](https://docs.asciidoctor.org/asciidoc/latest/)
