@@ -4,8 +4,6 @@
 
 [English](#english) | [繁體中文](#繁體中文)
 
----
-
 ## 繁體中文
 
 歡迎來到 **Rootimes's Code ICU**，這是一個專注於軟體工程、演算法及技術心得的個人部落格與知識庫。
@@ -21,8 +19,6 @@
 - **搜尋：** 完整的本地端全文檢索功能。
 - **評論：** 整合 [Giscus](https://giscus.app/) (GitHub Discussions)。
 - **SEO 優化：** 包含 JSON-LD、站點地圖與 Meta 標籤。
-
----
 
 ## English
 
