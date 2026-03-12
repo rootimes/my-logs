@@ -110,7 +110,7 @@ public class HelloBean {
 
 ### ClassPathXmlApplicationContext
 
-專門用來處理 XML 配置的 Spring 容器實作
+專門用來處理 XML 設定的 Spring 容器實作
 
 ```java
 ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
@@ -122,7 +122,7 @@ ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 ### FileSystemXmlApplicationContext
 
-專門用來處理 XML 配置的 Spring 容器實作，與 ClassPathXmlApplicationContext 類似，但從文件系統路徑讀取配置文件
+專門用來處理 XML 設定的 Spring 容器實作，與 ClassPathXmlApplicationContext 類似，但從文件系統路徑讀取設定文件
 
 ```java
 ApplicationContext context = new FileSystemXmlApplicationContext("config/beans.xml");
@@ -141,7 +141,7 @@ context.register(AppConfig.class);
 
 ### @Configuration
 
-表示這個類是 Spring 的配置類，類似於 XML 配置文件，可以用來定義 Bean 和其他配置
+表示這個類是 Spring 的設定類，類似於 XML 設定文件，可以用來定義 Bean 和其他設定
 
 ```java
 @Configuration

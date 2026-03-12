@@ -232,7 +232,7 @@ include::{snippets}/status-get/response-fields.adoc[]
 
 ### 在 WebConfig 中加入資源處理器
 
-**@EnableWebMvc** 註解會啟動一套預設的 Web 配置。
+**@EnableWebMvc** 註解會啟動一套預設的 Web 設定。
 
 為了讓 Spring MVC 能對外提供我們打包好的靜態 HTML 文件，必須實作 **WebMvcConfigurer** 來註冊靜態資源路徑。
 

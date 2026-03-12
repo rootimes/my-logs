@@ -90,7 +90,7 @@ spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 ```
 
-### 讀取資料庫連線資訊與配置 Spring 容器
+### 讀取資料庫連線資訊與設定 Spring 容器
 
 在純 Spring 環境下讀取外部屬性檔案有幾種常見做法：
 
@@ -100,7 +100,7 @@ spring.jpa.show-sql=true
 
 3. **@ConfigurationProperties**：將屬性綁定到特定的 Java 類別中（較常用於 Spring Boot）。
 
-此處我們採用 **Environment 物件** 的方式配置基礎建設。
+此處我們採用 **Environment 物件** 的方式設定基礎建設。
 
 **Environment** 允許從 **application.properties** 讀取屬性，也支援系統環境變數等來源。
 
