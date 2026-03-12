@@ -10,7 +10,7 @@ description = "Why do we need to keep producing output? It is not merely about s
 
 ## Why Should We Keep Producing Output?
 
-I am someone who enjoys expressing opinions.
+I am someone who enjoys expressing thoughts.
 
 Whether in technical discussions or reflections on life, I have always made it a habit to translate my thoughts into words.
 

@@ -1,12 +1,16 @@
 +++
-title = 'Spring Sparrow One'
+title = 'Spring Sparrow Start'
 date = 2026-03-04T11:00:41+08:00
-draft = true
+draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹 Bean 篇章"
+description = "Spring Framework 入門介紹：初始篇章"
 +++
+
+## 關注點
+
+1. Spring Framework 的服務啟動流程：從建立 ApplicationContext 到註冊 Bean，再到啟動服務的整個過程。
 
 ## 啟動專案
 
@@ -21,16 +25,17 @@ mvn archetype:generate -DgroupId=sparrow -DartifactId=legacy -DarchetypeArtifact
 - DarchetypeArtifactId : 專案模板
 - DinteractiveMode : 跳出詢問視窗
 
-### 加入 Spring dependency
+### 加入 Spring Framework 相關依賴
 
-在 `pom.xml` 中加入 `spring-context`，它會自動包含 `spring-core`、`spring-beans` 與 `spring-aop` 等核心模組：
+在 `pom.xml` 中加入 `spring-context`，
+它會自動包含 `spring-core`、`spring-beans` 與 `spring-aop` 等核心模組：
 
 ```xml
 <dependencies>
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
-        <version>6.1.4</version>
+        <version>7.0.5</version>
     </dependency>
 </dependencies>
 ```
@@ -105,7 +110,7 @@ public class HelloBean {
 
 ### ClassPathXmlApplicationContext
 
-專門用來處理 XML 配置的 Spring 容器實作
+專門用來處理 XML 設定的 Spring 容器實作
 
 ```java
 ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
@@ -117,7 +122,7 @@ ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 
 ### FileSystemXmlApplicationContext
 
-專門用來處理 XML 配置的 Spring 容器實作，與 ClassPathXmlApplicationContext 類似，但從文件系統路徑讀取配置文件
+專門用來處理 XML 設定的 Spring 容器實作，與 ClassPathXmlApplicationContext 類似，但從文件系統路徑讀取設定文件
 
 ```java
 ApplicationContext context = new FileSystemXmlApplicationContext("config/beans.xml");
@@ -136,7 +141,7 @@ context.register(AppConfig.class);
 
 ### @Configuration
 
-表示這個類是 Spring 的配置類，類似於 XML 配置文件，可以用來定義 Bean 和其他配置
+表示這個類是 Spring 的設定類，類似於 XML 設定文件，可以用來定義 Bean 和其他設定
 
 ```java
 @Configuration
@@ -212,4 +217,4 @@ public class OrderService {
 
 ## 參考
 
-- [Spring Framework 官方文檔](https://spring.io/projects/spring-framework)
+[Spring Beans 官方文檔](https://docs.spring.io/spring-framework/reference/core/beans.html)
