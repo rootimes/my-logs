@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：CRUD 篇章"
+description = "Spring Framework 入門介紹：CRUD 篇章，涵蓋資料庫設計、CRUD 實作，以及 RESTFul API 設計，並結合實際的程式碼範例說明。"
 +++
 
 ## 關注點

@@ -5,7 +5,7 @@ draft = true
 tags = [
     "spring",
 ]
-description = "這是一則描述"
+description = "Spring Framework 入門介紹：Security 篇章，實作登入登出 API，包含 session 與 JWT 驗證，並且實作權杖輪換機制以提升安全性。"
 +++
 
 ## 關注點

@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：JPA 篇章"
+description = "Spring Framework 入門介紹：JPA 篇章，涵蓋 JPA 與 MySQL 的整合設定、Entity 與 Repository 的實作，以及實際運作範例。"
 +++
 
 ## 關注點

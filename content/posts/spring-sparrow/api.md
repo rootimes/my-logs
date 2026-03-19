@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：API 篇章"
+description = "Spring Framework 入門介紹：API 篇章，涵蓋 Spring Framework Api Server 的啟動，實作健康檢查 API，確保服務正常運行。"
 +++
 
 ## 關注點

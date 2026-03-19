@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：整合測試篇章"
+description = "Spring Framework 入門介紹：整合測試篇章，涵蓋測試策略、測試類型選擇實務經驗分享、測試撰寫範例，以及 REST Docs 文件產生。"
 +++
 
 ## 關注點
