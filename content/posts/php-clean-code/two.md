@@ -603,4 +603,4 @@ $balance = $bankAccount->getBalance();
 
 ## 參考資料
 
-[piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)
+- [piotrplenik/clean-code-php](https://github.com/piotrplenik/clean-code-php)

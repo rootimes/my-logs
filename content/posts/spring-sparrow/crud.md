@@ -615,16 +615,10 @@ public class PostService {
 
 ## 參考資料
 
-[Spring Guides - Building a RESTful Web Service](https://spring.io/guides/tutorials/rest)
-
-[Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
-
-[DBML Documentation](https://dbml.dbdiagram.io/home)
-
-[JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
-
-[Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
-
-[MAVEN Dependency](https://mvnrepository.com/)
-
-[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Spring Guides - Building a RESTful Web Service](https://spring.io/guides/tutorials/rest)
+- [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
+- [DBML Documentation](https://dbml.dbdiagram.io/home)
+- [JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
+- [Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
+- [MAVEN Dependency](https://mvnrepository.com/)
+- [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)

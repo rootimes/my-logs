@@ -217,4 +217,4 @@ public class OrderService {
 
 ## 參考
 
-[Spring Beans 官方文檔](https://docs.spring.io/spring-framework/reference/core/beans.html)
+- [Spring Beans 官方文檔](https://docs.spring.io/spring-framework/reference/core/beans.html)

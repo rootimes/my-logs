@@ -225,6 +225,5 @@ LSP 關注的重點不在於語法上的繼承與否，而是：
 
 ## 參考
 
-Clean Architecture - Robert C. Martin
-
-[Behavioral Subtyping Using Invariants and Constraints](http://reports-archive.adm.cs.cmu.edu/anon/1999/CMU-CS-99-156.pdf)
+- Clean Architecture - Robert C. Martin
+- [Behavioral Subtyping Using Invariants and Constraints](http://reports-archive.adm.cs.cmu.edu/anon/1999/CMU-CS-99-156.pdf)

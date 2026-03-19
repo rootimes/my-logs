@@ -176,4 +176,4 @@ public class Main {
 
 ## 參考資料
 
-[Law of Demeter: Principle of Least Knowledge](https://www.ccs.neu.edu/home/lieber/LoD.html)
+- [Law of Demeter: Principle of Least Knowledge](https://www.ccs.neu.edu/home/lieber/LoD.html)

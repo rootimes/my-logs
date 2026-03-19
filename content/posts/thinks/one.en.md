@@ -76,4 +76,4 @@ This manifesto is a reminder to myself: do not fear being wrong—fear stagnatio
 
 ## Reference
 
-[Geomagnetic reversal](https://zh.wikipedia.org/zh-tw/%E5%9C%B0%E7%A3%81%E9%80%86%E8%BD%89)
+- [Geomagnetic reversal](https://zh.wikipedia.org/zh-tw/%E5%9C%B0%E7%A3%81%E9%80%86%E8%BD%89)
