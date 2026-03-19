@@ -1,0 +1,53 @@
+sequenceDiagram
+    participant Client as 用戶端 (Frontend)
+    participant Filter as Security Filter (JwtAuthenticationFilter)
+    participant AuthAPI as AuthController
+    participant Service as AuthService
+    participant DB as 資料庫 (User Table)
+    participant Context as SecurityContext / Session
+
+    Note over Client, Context: 【 階段一：登入驗證 (Login & Issue Tokens) 】
+    Client->>AuthAPI: POST /api/auth/login (email, password)
+    AuthAPI->>Service: authenticate() & createAuthResponse()
+    Service->>DB: 查詢用戶 & 驗證密碼 (BCrypt)
+    Service->>DB: 產生並儲存 UUID (RT-1) 效期 7 天
+    Service-->>AuthAPI: 回傳 { accessToken: JWT(AT-1), refreshToken: RT-1 }
+    AuthAPI-->>Client: 200 OK (前端儲存雙 Token & Set-Cookie 標頭將 JSESSIONID 傳回給瀏覽器)
+
+    Note over Client, Context: 【 階段二：一般授權操作 (JWT Validation) 】
+    Client->>Filter: 呼叫 API (Header: Bearer AT-1)
+    Filter->>Filter: 解析並校驗 JWT (Signature & Expiration)
+    Filter->>Context: 設定 Authentication (email, authorities)
+    Context-->>AuthAPI: 通過過濾器抵達 Controller
+    AuthAPI-->>Client: 200 OK (正常回應業務數據)
+
+    Note over Client, Context: 【 階段三：權杖輪換 (Refresh Token Rotation) 】
+    Client->>Filter: 呼叫 API (AT-1 已過期)
+    Filter-->>Client: 401 Unauthorized (Access Token Expired)
+
+    Client->>AuthAPI: POST /api/auth/refresh (Body: { refreshToken: RT-1 })
+    AuthAPI->>Service: refreshToken(RT-1)
+    Service->>DB: 驗證 RT-1 是否存在且未過期
+    DB-->>Service: 驗證通過
+
+    rect rgb(235, 245, 255)
+        Note right of Service: [安全性核心] 舊 RT-1 立即作廢並核發新 RT
+        Service->>DB: 產生全新 UUID (RT-2) 覆蓋 RT-1
+    end
+
+    Service-->>AuthAPI: 回傳 { 新 AT-2, 新 RT-2 }
+    AuthAPI-->>Client: 200 OK (前端必須更新 AT-2, RT-2)
+
+    Note over Client, Context: 【 階段四：安全性登出 (Logout & Revocation) 】
+    Client->>AuthAPI: POST /api/auth/logout (Bearer AT-2)
+
+    rect rgb(255, 240, 240)
+        Note right of AuthAPI: [徹底清除] Session 與 Refresh Token 狀態
+        AuthAPI->>Context: session.invalidate()
+        AuthAPI->>Service: logout()
+        Service->>DB: 將該使用者的 refreshToken 欄位設為 NULL
+        Service->>Context: SecurityContextHolder.clearContext()
+    end
+
+    AuthAPI-->>Client: 200 OK (Logout successful)
+    Note over Client: 前端主動刪除本機存儲的<br/>所有 Access & Refresh Tokens
