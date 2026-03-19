@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：JPA 篇章"
+description = "Spring Framework 入門介紹：JPA 篇章，涵蓋 JPA 與 MySQL 的整合設定、Entity 與 Repository 的實作，以及實際運作範例。"
 +++
 
 ## 關注點
@@ -272,10 +272,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 ## 參考資料
 
-[Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
-
-[JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
-
-[Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
-
-[MAVEN Dependency](https://mvnrepository.com/)
+- [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
+- [JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
+- [Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
+- [MAVEN Dependency](https://mvnrepository.com/)

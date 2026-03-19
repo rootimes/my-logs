@@ -5,7 +5,7 @@ draft = false
 tags = [
     "basic",
 ]
-description = "里氏替換原則 (LSP) 強調子類別應該可以替換其父類別而不影響程式的正確性。本文探討 LSP 的核心定義與實作細節"
+description = "里氏替換原則 (LSP) 強調子類別應該可以替換其父類別而不影響程式的正確性。本文探討 LSP 的核心定義與實作細節。"
 +++
 
 ## 介紹
@@ -225,6 +225,5 @@ LSP 關注的重點不在於語法上的繼承與否，而是：
 
 ## 參考
 
-Clean Architecture - Robert C. Martin
-
-[Behavioral Subtyping Using Invariants and Constraints](http://reports-archive.adm.cs.cmu.edu/anon/1999/CMU-CS-99-156.pdf)
+- Clean Architecture - Robert C. Martin
+- [Behavioral Subtyping Using Invariants and Constraints](http://reports-archive.adm.cs.cmu.edu/anon/1999/CMU-CS-99-156.pdf)

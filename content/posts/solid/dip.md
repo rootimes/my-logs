@@ -157,4 +157,4 @@ DIP 關注不僅只有依賴強度，更重要的是：
 
 ## 參考資料
 
-Clean Architecture - Robert C. Martin
+- Clean Architecture - Robert C. Martin

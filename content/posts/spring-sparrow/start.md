@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：初始篇章"
+description = "Spring Framework 入門介紹：初始篇章，涵蓋 Spring Framework 的服務啟動流程、核心概念以及基本註解的使用，並提供實際的程式碼範例說明。"
 +++
 
 ## 關注點
@@ -217,4 +217,4 @@ public class OrderService {
 
 ## 參考
 
-[Spring Beans 官方文檔](https://docs.spring.io/spring-framework/reference/core/beans.html)
+- [Spring Beans 官方文檔](https://docs.spring.io/spring-framework/reference/core/beans.html)

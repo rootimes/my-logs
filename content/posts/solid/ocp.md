@@ -5,7 +5,7 @@ draft = false
 tags = [
     "basic",
 ]
-description = "開放封閉原則 (OCP) 強調軟體實體應該對擴展開放，對修改封閉。本文探討 OCP 的核心定義與實作細節"
+description = "開放封閉原則 (OCP) 強調軟體實體應該對擴展開放，對修改封閉。本文探討 OCP 的核心定義與實作細節。"
 +++
 
 ## 介紹
@@ -129,4 +129,4 @@ public class Order {
 
 ## 參考
 
-Clean Architecture - Robert C. Martin
+- Clean Architecture - Robert C. Martin

@@ -451,5 +451,4 @@ public function getSomeDateAttribute($date)
 
 ## 參考資料
 
-[Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)
-
+- [Laravel best practices](https://github.com/alexeymezenin/laravel-best-practices)

@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：AOP 篇章"
+description = "Spring Framework 入門介紹：AOP 篇章，涵蓋 Spring Framework 的 AOP 功能與應用舉例，介紹切面、連接點、通知與切入點等核心概念，以及實際的程式碼範例說明。"
 +++
 
 ## 關注點
@@ -157,4 +157,4 @@ public class PerformanceAspect {
 
 ## 參考資料
 
-[Spring AOP 官方文件](https://docs.spring.io/spring-framework/reference/core/aop.html)
+- [Spring AOP 官方文件](https://docs.spring.io/spring-framework/reference/core/aop.html)

@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：REST Docs 篇章"
+description = "Spring Framework 入門介紹：REST Docs 篇章，涵蓋如何使用 Spring REST Docs 生成 API 文件，並將文件部署到網頁上供外部訪問。"
 +++
 
 ## 關注點

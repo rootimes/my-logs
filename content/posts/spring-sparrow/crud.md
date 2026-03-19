@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：CRUD 篇章"
+description = "Spring Framework 入門介紹：CRUD 篇章，涵蓋資料庫設計、CRUD 實作，以及 RESTFul API 設計，並結合實際的程式碼範例說明。"
 +++
 
 ## 關注點
@@ -308,7 +308,7 @@ Spring 標註說明：
 
 - @Transactional：確保資料庫操作在同一交易中執行，發生例外時自動 Rollback。
 
-#### create post controller
+#### Create Post Controller
 
 ```java
 @RestController
@@ -328,7 +328,7 @@ public class PostController {
 }
 ```
 
-#### create post service
+#### Create Post Service
 
 ```java
 @Service
@@ -402,7 +402,7 @@ public class PostService {
 }
 ```
 
-#### create repository
+#### Create Repository
 
 ```java
 @Repository
@@ -432,7 +432,7 @@ Spring 標註與參數說明：
 
 - Pageable：Spring Web 自動將 URL 的查詢參數（如 ?page=0&size=10）轉換為分頁物件。
 
-#### get post list controller
+#### Get Post List Controller
 
 ```java
 public class PostController {
@@ -444,7 +444,7 @@ public class PostController {
 }
 ```
 
-#### get post list service
+#### Get Post List Service
 
 ```java
 public class PostService {
@@ -488,7 +488,7 @@ public class PostController {
 }
 ```
 
-#### get post service
+#### Get Post Service
 
 ```java
 public class PostService {
@@ -508,9 +508,9 @@ public class PostService {
 }
 ```
 
-### update post API
+### Update Post API
 
-#### update post controller
+#### Update Post Controller
 
 ```java
 public class PostController {
@@ -523,7 +523,7 @@ public class PostController {
 }
 ```
 
-#### update post service
+#### Update Post Service
 
 ```java
 public class PostService {
@@ -549,9 +549,9 @@ public class PostService {
 }
 ```
 
-### delete post API
+### Delete Post API
 
-#### delete post controller
+#### Delete Post Controller
 
 ```java
 public class PostController {
@@ -563,7 +563,7 @@ public class PostController {
 }
 ```
 
-#### delete post service
+#### Delete Post Service
 
 ```java
 public class PostService {
@@ -615,16 +615,10 @@ public class PostService {
 
 ## 參考資料
 
-[Spring Guides - Building a RESTful Web Service](https://spring.io/guides/tutorials/rest)
-
-[Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
-
-[DBML Documentation](https://dbml.dbdiagram.io/home)
-
-[JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
-
-[Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
-
-[MAVEN Dependency](https://mvnrepository.com/)
-
-[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+- [Spring Guides - Building a RESTful Web Service](https://spring.io/guides/tutorials/rest)
+- [Spring Data JPA Documentation](https://docs.spring.io/spring-data/jpa/reference/)
+- [DBML Documentation](https://dbml.dbdiagram.io/home)
+- [JpaRepository API](https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html)
+- [Hibernate ORM Documentation](https://hibernate.org/orm/documentation/7.2/)
+- [MAVEN Dependency](https://mvnrepository.com/)
+- [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)

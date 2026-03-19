@@ -5,7 +5,7 @@ draft = false
 tags = [
     "spring",
 ]
-description = "Spring Framework 入門介紹：整合測試篇章"
+description = "Spring Framework 入門介紹：整合測試篇章，涵蓋測試策略、測試類型選擇實務經驗分享、測試撰寫範例，以及 REST Docs 文件產生。"
 +++
 
 ## 關注點
@@ -372,6 +372,6 @@ include::{snippets}/post-create/http-response.adoc[]
 
 ## 參考資料
 
-[MockMvc 官方文件](https://docs.spring.io/spring-framework/reference/6.1/testing/spring-mvc-test-framework.html)
-[Spring REST Docs 官方文件](https://docs.spring.io/spring-restdocs/docs/current/reference/htmlsingle/)
-[Asciidoctor 官方文件](https://docs.asciidoctor.org/asciidoc/latest/)
+- [MockMvc 官方文件](https://docs.spring.io/spring-framework/reference/6.1/testing/spring-mvc-test-framework.html)
+- [Spring REST Docs 官方文件](https://docs.spring.io/spring-restdocs/docs/current/reference/htmlsingle/)
+- [Asciidoctor 官方文件](https://docs.asciidoctor.org/asciidoc/latest/)
