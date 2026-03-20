@@ -25,17 +25,6 @@ description = "Spring Framework 入門介紹：整合測試篇章，涵蓋測試
 - **端對端測試（End-to-End Test, E2E）**  
   從使用者角度出發，測試整個應用程式的完整流程，驗證系統在真實使用情境下的行為是否符合預期。
 
-### Spring Sparrow 專案的測試策略
-
-測試方式會依據**專案需求與關注點**而有所不同。
-
-在 **Spring Sparrow** 這個專案中，其定位是 **API Resource Server**，主要關注點在於：
-
-- API 是否能正確回傳資料  
-- API 的整體功能是否正常運作  
-
-由於此專案的 **內部業務邏輯並不複雜**，因此選擇使用 **整合測試（Integration Test）** 來驗證 API 的功能。
-
 ### 個人實務經驗中的測試使用情境
 
 #### 單元測試（Unit Test）

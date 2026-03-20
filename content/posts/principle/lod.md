@@ -1,7 +1,7 @@
 +++
 title = '迪米特法則(Law of Demeter, LoD)'
 date = 2026-03-16T15:25:10+08:00
-draft = true
+draft = false
 tags = [
     "code principle",
 ]
