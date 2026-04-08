@@ -96,9 +96,7 @@ spring.jpa.show-sql=true
 
 1. **Environment 物件**：透過注入 Spring 的 **Environment** 物件，使用 getProperty 方法讀取參數值。
 
-2. **@Value 註解**：直接在屬性上標記並讀取 **application.properties** 中的值。
-
-3. **@ConfigurationProperties**：將屬性綁定到特定的 Java 類別中（較常用於 Spring Boot）。
+2. **@ConfigurationProperties**：將屬性綁定到特定的 Java 類別中（較常用於 Spring Boot）。
 
 此處我們採用 **Environment 物件** 的方式設定基礎建設。
 
@@ -134,11 +132,6 @@ import jakarta.persistence.EntityManagerFactory;
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "sparrow.repository")
 public class JPAMySqlConfig {
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
-        return new PropertySourcesPlaceholderConfigurer();
-    }
-
     @Autowired
     private Environment env;
 
