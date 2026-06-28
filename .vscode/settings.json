@@ -2,10 +2,8 @@
     "cSpell.words": [
         "poweredby"
     ],
-    "todo-tree.ripgrep": "rg",
     "chat.tools.terminal.autoApprove": {
         "command": true,
         "true": true
-    },
-    "todo-tree.ripgrep.ripgrep": "rg"
+    }
 }
